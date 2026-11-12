@@ -188,7 +188,7 @@ export function initStoreApp() {
   let currentWood = 'walnut';
   let currentTexture = 'eggshell';
   let basePrice = 650;
-  let multiplier = 1.4;
+  let multiplier = 1.0;
   let framingAddon = 0;
   let fulfillmentDelta = 0;
   let activeFramingId = 'float';
@@ -252,7 +252,7 @@ export function initStoreApp() {
     const size = activeSizeBtn?.getAttribute('data-size') || '24x36';
     const activeSubBtn = document.querySelector<HTMLButtonElement>('.substrate-btn.border-amber-400');
     const substrateName =
-      activeSubBtn?.getAttribute('data-name') || 'UltraHD Borderless Acrylic Glass';
+      activeSubBtn?.getAttribute('data-name') || 'Hahnemühle Photo Rag 308g (Fine Art Giclée)';
     const paint = getActivePaintInfo();
 
     return {
@@ -311,8 +311,17 @@ export function initStoreApp() {
       orderPayloadPre.textContent = JSON.stringify(v2Payload, null, 2);
     }
 
+    // Keep the 3 size buttons showing honest, transparent print prices for the active medium
+    sizeBtns.forEach((b) => {
+      const szBase = parseInt(b.getAttribute('data-base-price') || '650', 10);
+      const priceTag = b.querySelector<HTMLElement>('.size-price-label');
+      if (priceTag) {
+        priceTag.textContent = `$${Math.round(szBase * multiplier)}`;
+      }
+    });
+
     const simPriceSpan = document.getElementById('judge-sim-price');
-    if (simPriceSpan) simPriceSpan.textContent = `$${spec.totalUsd}`;
+    if (simPriceSpan) simPriceSpan.textContent = `$${spec.totalUsd} → COA`;
   }
 
   function applyPaintByCodeOrName(queryStr: string) {
@@ -335,10 +344,11 @@ export function initStoreApp() {
     currentWood = WOOD_STYLES[woodKey] ? woodKey : 'walnut';
     const w = WOOD_STYLES[currentWood];
     woodBtns.forEach((b) => {
+      if (b.parentElement?.classList.contains('hidden')) return;
       const active = b.getAttribute('data-wood') === currentWood;
       b.className = active
-        ? 'wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shadow-md shrink-0'
-        : 'wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer shrink-0';
+        ? 'wood-btn px-2.5 py-1 rounded-lg text-[10px] font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shrink-0'
+        : 'wood-btn px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0';
     });
     document.querySelectorAll<HTMLElement>('.timber-surface').forEach((el) => {
       el.style.background = w.topBg;
@@ -386,10 +396,15 @@ export function initStoreApp() {
   function selectRoomEnvironment(room: string) {
     currentRoom = ROOM_DEFAULTS[room] ? room : 'living';
     roomBtns.forEach((b) => {
-      const active = b.getAttribute('data-room') === currentRoom;
+      const rKey = b.getAttribute('data-room');
+      if (rKey === 'pavilion' && currentRoom !== 'pavilion') {
+        b.className = 'room-btn hidden';
+        return;
+      }
+      const active = rKey === currentRoom;
       b.className = active
-        ? 'room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shadow-sm'
-        : 'room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer';
+        ? 'room-btn px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-400 text-slate-950 cursor-pointer'
+        : 'room-btn px-2.5 py-0.5 rounded-full text-[11px] text-slate-200 hover:text-white cursor-pointer';
     });
 
     ['living', 'hearth', 'office', 'gallery', 'pavilion'].forEach((r) => {
@@ -435,8 +450,8 @@ export function initStoreApp() {
     quickSwapBtns.forEach((b) => {
       const active = b.getAttribute('data-id') === art.id;
       b.className = active
-        ? 'quick-swap-btn shrink-0 w-28 rounded-xl overflow-hidden border-2 transition-all cursor-pointer group border-amber-400 scale-105 ring-2 ring-amber-400/50'
-        : 'quick-swap-btn shrink-0 w-28 rounded-xl overflow-hidden border-2 transition-all cursor-pointer group border-slate-800 hover:border-slate-600';
+        ? 'quick-swap-btn shrink-0 w-20 rounded-lg overflow-hidden border transition-all cursor-pointer border-amber-400 ring-1 ring-amber-400'
+        : 'quick-swap-btn shrink-0 w-20 rounded-lg overflow-hidden border transition-all cursor-pointer border-slate-800 opacity-75 hover:opacity-100';
     });
 
     catalogCards.forEach((card) => {
@@ -495,10 +510,11 @@ export function initStoreApp() {
       currentTexture = TEXTURE_STYLES[key] ? key : 'eggshell';
       const st = TEXTURE_STYLES[currentTexture];
       textureBtns.forEach((b) => {
+        if (b.parentElement?.classList.contains('hidden') || b.classList.contains('hidden')) return;
         const active = b === btn;
         b.className = active
-          ? 'texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shadow-md shrink-0'
-          : 'texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer shrink-0';
+          ? 'texture-btn px-2.5 py-1 rounded-lg text-[10px] font-bold bg-amber-500 text-black cursor-pointer shrink-0'
+          : 'texture-btn px-2.5 py-1 rounded-lg text-[10px] font-bold bg-slate-900 text-slate-300 cursor-pointer shrink-0';
       });
       if (textureOverlay) {
         textureOverlay.style.backgroundImage = st.bg;
@@ -533,10 +549,10 @@ export function initStoreApp() {
     btn.addEventListener('click', () => {
       sizeBtns.forEach((b) => {
         b.className =
-          'size-btn py-1.5 px-2 rounded-xl bg-slate-900 border border-slate-700 hover:border-amber-400 text-center cursor-pointer transition-all text-white';
+          'size-btn py-2.5 px-2 rounded-xl bg-slate-950 border border-slate-800 hover:border-amber-400 text-center cursor-pointer transition-all text-white';
       });
       btn.className =
-        'size-btn py-1.5 px-2 rounded-xl bg-amber-500 text-black border border-amber-400 font-bold text-center cursor-pointer shadow-md';
+        'size-btn py-2.5 px-2 rounded-xl bg-amber-500 text-black border border-amber-400 font-bold text-center cursor-pointer';
       basePrice = parseInt(btn.getAttribute('data-base-price') || '650', 10);
       const sz = btn.getAttribute('data-size');
       if (frame) {
@@ -641,10 +657,10 @@ export function initStoreApp() {
     btn.addEventListener('click', () => {
       filterBtns.forEach((b) => {
         b.className =
-          'store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 transition-all cursor-pointer shrink-0';
+          'store-filter-btn px-3 py-1 rounded-full bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0';
       });
       btn.className =
-        'store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-amber-500 text-black border border-amber-400 transition-all cursor-pointer shadow-md shrink-0';
+        'store-filter-btn px-3 py-1 rounded-full font-bold bg-amber-500 text-black cursor-pointer shrink-0';
       const filter = btn.getAttribute('data-filter') || 'all';
       catalogCards.forEach((card) => {
         const domain = card.getAttribute('data-domain');
@@ -862,12 +878,12 @@ export function initStoreApp() {
     if (aiResultBox) aiResultBox.classList.remove('hidden');
     if (aiRationaleEl) aiRationaleEl.textContent = rec.rationale;
     if (aiEngineBadge) {
-      aiEngineBadge.textContent = `Engine: ${rec.engineUsed} • ${(rec.confidenceScore * 100).toFixed(0)}% Match • $${rec.estimatedTotalUsd} USD`;
+      aiEngineBadge.textContent = `Matched for your space • $${rec.estimatedTotalUsd} total`;
     }
     if (aiSubmitBtn) {
       aiSubmitBtn.removeAttribute('disabled');
       aiSubmitBtn.innerHTML =
-        '<i class="fas fa-wand-magic-sparkles"></i> <span>Stage & Price Room</span>';
+        '<i class="fas fa-wand-magic-sparkles"></i> <span>Match My Room</span>';
     }
     wall?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
@@ -930,6 +946,8 @@ export function initStoreApp() {
 
   document.querySelectorAll<HTMLButtonElement>('.webmcp-test-btn').forEach((btn) => {
     btn.addEventListener('click', async () => {
+      const devDrawer = document.getElementById('judge-developer-drawer') as HTMLDetailsElement | null;
+      if (devDrawer) devDrawer.open = true;
       const toolName = btn.getAttribute('data-tool') || '';
       const rawArgs = btn.getAttribute('data-args') || '{}';
       const tool = registeredTools.find((t) => t.name === toolName);

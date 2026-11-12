@@ -8,13 +8,12 @@ interface Props {
 }
 
 const {
-  title = 'Agentic Interior Art Concierge & PayPal Orders v2 Store — Phil Gear Photography',
-  description = 'Interactive 1:10 architectural wall art visualizer powered by AI Interior Concierge, WebMCP Agentic Commerce, and PayPal Orders v2 Sandbox Checkout.',
+  title = 'Phil Gear Photography — Fine Art Prints',
+  description = 'Archival Pacific Northwest fine art prints with AI room sizing and PayPal checkout.',
 } = Astro.props;
 
 const rawBase = import.meta.env.BASE_URL || '/';
 const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
-const themes = ['PEBBLE', 'RUBAIYAT', 'KELLS'];
 ---
 
 <!DOCTYPE html>
@@ -39,123 +38,71 @@ const themes = ['PEBBLE', 'RUBAIYAT', 'KELLS'];
       font-weight: 400;
       font-display: swap;
     }
+    @font-face {
+      font-family: 'PocketGull Kinpaku';
+      src: url('${base}fonts/PocketGull-Kinpaku.woff2') format('woff2');
+      font-weight: 400 900;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'PocketGull Kintsugi';
+      src: url('${base}fonts/PocketGull-Kintsugi.woff2') format('woff2');
+      font-weight: 400 700;
+      font-display: swap;
+    }
   `} />
 </head>
-<body class="bg-(--color-background) text-(--color-text) min-h-dvh flex flex-col font-sans antialiased selection:bg-amber-400/30 selection:text-amber-200">
-  <!-- Top Header -->
-  <header class="bg-(--color-panel-background)/95 backdrop-blur-md border-b border-(--color-panel-border) sticky top-0 z-40 shadow-lg print:hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="flex items-center justify-between h-16 gap-3" aria-label="Store navigation">
-        <a href={`${base}`} class="flex items-center gap-2.5 text-white group">
+<body class="bg-slate-950 text-slate-100 min-h-dvh flex flex-col font-sans antialiased selection:bg-amber-400/30 selection:text-amber-200">
+  <!-- Minimal Gallery Header -->
+  <header class="bg-slate-950/90 backdrop-blur-md border-b border-slate-900 sticky top-0 z-40 print:hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav class="flex items-center justify-between h-14 gap-4" aria-label="Gallery navigation">
+        <a href={`${base}`} class="flex items-center gap-2.5 text-white">
           <img
             src={`${base}pwa-192x192.png`}
             alt="Phil Gear Photography"
-            class="size-9 rounded-full border-2 border-amber-400/70 shadow-md object-cover group-hover:scale-105 transition-transform"
+            class="size-8 rounded-full border border-amber-400/60 object-cover"
           />
-          <div>
-            <span class="font-pocketgull text-lg sm:text-xl font-black tracking-tight block leading-none group-hover:text-amber-300 transition-colors">
-              Phil Gear Photography
-            </span>
-            <span class="text-[10px] font-mono text-cyan-300 uppercase tracking-wider block mt-0.5">
-              PayPal AI Hackathon • Agentic Atelier
-            </span>
-          </div>
+          <span class="font-kinpaku text-lg sm:text-xl tracking-tight leading-none">
+            Phil Gear Photography
+          </span>
         </a>
 
-        <div class="hidden md:flex items-center gap-5 text-xs font-mono">
-          <a href={`${base}#ai-concierge-panel`} class="text-amber-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors">
-            <i class="fas fa-wand-magic-sparkles"></i>
-            <span>AI Art Concierge</span>
+        <div class="flex items-center gap-5 text-xs text-slate-300">
+          <a href={`${base}#print-catalog`} class="hover:text-white transition-colors">
+            Collection
           </a>
-          <a href={`${base}#paypal-checkout-ledger`} class="text-[#38bdf8] hover:text-white font-bold flex items-center gap-1.5 transition-colors">
-            <i class="fab fa-paypal"></i>
-            <span>PayPal Orders v2</span>
+          <a href={`${base}certificate/`} class="hover:text-amber-300 transition-colors">
+            Authenticity
           </a>
-          <a href={`${base}#webmcp-inspector`} class="text-emerald-300 hover:text-white font-bold flex items-center gap-1.5 transition-colors">
-            <i class="fas fa-robot"></i>
-            <span>WebMCP Tools (4)</span>
-          </a>
-          <a href={`${base}#print-catalog`} class="text-slate-300 hover:text-white transition-colors">
-            Catalog (36)
-          </a>
-          <a href={`${base}certificate/`} class="text-slate-300 hover:text-amber-300 transition-colors">
-            SHA-256 COA
-          </a>
-        </div>
-
-        <div class="flex items-center gap-2">
-          <div class="flex items-center p-1 rounded-full bg-slate-900/90 border border-slate-700" role="group" aria-label="Color theme">
-            {themes.map((theme) => {
-              const dotColor = theme === 'PEBBLE' ? '#38bdf8' : theme === 'KELLS' ? '#4ade80' : '#e05353';
-              return (
-                <button
-                  type="button"
-                  data-theme-btn={theme.toLowerCase()}
-                  class="theme-pill-btn font-mono text-[10px] font-bold px-2 py-1 rounded-full text-slate-300 hover:text-white transition-all uppercase cursor-pointer flex items-center gap-1"
-                >
-                  <span class="size-2 rounded-full" style={`background-color: ${dotColor}`}></span>
-                  <span class="hidden sm:inline">{theme}</span>
-                </button>
-              );
-            })}
-          </div>
         </div>
       </nav>
     </div>
   </header>
 
-  <main class="flex-1 w-full relative klee-canvas-texture">
+  <main class="flex-1 w-full">
     <slot />
   </main>
 
-  <footer class="mt-16 border-t border-slate-800 bg-slate-950/90 text-slate-400 py-8 px-4 sm:px-6 lg:px-8 text-xs font-mono print:hidden">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+  <footer class="mt-16 border-t border-slate-900 py-8 px-4 sm:px-6 text-xs text-slate-500 print:hidden">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
       <div class="flex items-center gap-2">
-        <span class="size-2.5 rounded-full bg-amber-400"></span>
-        <span class="text-white font-bold">PHIL GEAR PHOTOGRAPHY</span>
+        <span class="font-kinpaku text-sm text-slate-200">PocketGull Kinpaku™ 金箔</span>
         <span>•</span>
-        <span>Built for the 2026 PayPal AI Hackathon (Apache-2.0)</span>
+        <span>24k Gold COLR/CPAL + −45.8% Eco-Ink</span>
       </div>
-      <div class="flex items-center gap-4 flex-wrap justify-center">
-        <a href="https://www.philgearphotography.com/store" target="_blank" rel="noopener noreferrer" class="hover:text-amber-300 transition-colors">
-          Production Store ↗
+      <div class="flex items-center gap-4">
+        <a href="https://www.philgearphotography.com/store" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">
+          philgearphotography.com
         </a>
-        <a href="https://github.com/philgear/pgphototrek-paypal-ai" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition-colors">
-          <i class="fab fa-github mr-1"></i>GitHub Source ↗
+        <a href="https://github.com/philgear/pgphototrek-paypal-ai" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">
+          GitHub
         </a>
-        <a href={`${base}llms.txt`} class="hover:text-emerald-300 transition-colors">
-          llms.txt
+        <a href={`${base}#judge-developer-drawer`} class="hover:text-slate-300 transition-colors">
+          PayPal &amp; AI Specs
         </a>
       </div>
     </div>
   </footer>
-
-  <script>
-    function initThemeSwitcher() {
-      const saved = localStorage.getItem('pg_store_theme') || 'pebble';
-      document.documentElement.setAttribute('data-theme', saved);
-      const btns = document.querySelectorAll('.theme-pill-btn');
-      const syncActive = (t: string) => {
-        btns.forEach((b) => {
-          const val = b.getAttribute('data-theme-btn');
-          if (val === t) {
-            b.classList.add('bg-white/15', 'text-white');
-          } else {
-            b.classList.remove('bg-white/15', 'text-white');
-          }
-        });
-      };
-      syncActive(saved);
-      btns.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const next = btn.getAttribute('data-theme-btn') || 'pebble';
-          document.documentElement.setAttribute('data-theme', next);
-          localStorage.setItem('pg_store_theme', next);
-          syncActive(next);
-        });
-      });
-    }
-    initThemeSwitcher();
-  </script>
 </body>
 </html>

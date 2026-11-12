@@ -6,6 +6,8 @@
   --font-mono: "PocketGull Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
   --font-science-gothic: "PocketGull", -apple-system, BlinkMacSystemFont, sans-serif;
   --font-pocketgull: "PocketGull", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-kinpaku: "PocketGull Kinpaku", "PocketGull Kintsugi", "PocketGull", serif;
+  --font-kintsugi: "PocketGull Kintsugi", "PocketGull", sans-serif;
 }
 
 :root,
@@ -87,4 +89,10 @@ html {
 }
 .scrollbar-none::-webkit-scrollbar {
   display: none;
+}
+
+@media print {
+  .eco-ink-print {
+    font-family: "PocketGull Kintsugi", "PocketGull", sans-serif !important;
+  }
 }
