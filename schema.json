@@ -1,0 +1,100 @@
+{
+  "tools": [
+    {
+      "name": "search_fine_art_prints",
+      "description": "Searches curated fine art photographic prints by mood, landscape subject, room vibe, or wall color harmony. Use when exploring or comparing print candidates before mounting one.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Natural-language subject, mood, lighting, or color palette keywords"
+          },
+          "domain": {
+            "type": "string",
+            "enum": ["all", "wilderness", "water", "built", "macro"],
+            "description": "Optional photographic sphere filter"
+          },
+          "page": {
+            "type": "integer",
+            "description": "Page number starting at 1 (6 items per page)"
+          }
+        },
+        "required": ["query"]
+      },
+      "annotations": {
+        "readOnlyHint": true
+      }
+    },
+    {
+      "name": "stage_artwork_in_room",
+      "description": "Mounts a fine art print into the 1:10 architectural room visualizer and configures room silhouette, wall paint, print dimensions, substrate, framing, or fulfillment. Use when staging or customizing a print on the wall.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "artwork_id": {
+            "type": "string",
+            "description": "Identifier of the print to mount (from search results)"
+          },
+          "room": {
+            "type": "string",
+            "enum": ["living", "hearth", "office", "gallery", "pavilion"],
+            "description": "Architectural room environment silhouette"
+          },
+          "paint_code": {
+            "type": "string",
+            "enum": ["CA002", "MW001", "JLS04", "CA184", "NW045", "CA092", "H0010", "CA223", "NW010"],
+            "description": "Pacific Northwest Rodda or Miller wall paint code"
+          },
+          "size": {
+            "type": "string",
+            "enum": ["16x24", "24x36", "40x60"],
+            "description": "Uncropped 300 DPI print dimensions in inches"
+          },
+          "substrate": {
+            "type": "string",
+            "enum": ["acrylic", "giclee", "metal"],
+            "description": "Museum archival print medium"
+          },
+          "framing": {
+            "type": "string",
+            "enum": ["float", "beards-black", "beards-walnut", "beards-kells", "pdx-wlf-luminescent", "goodwill-upcycle"],
+            "description": "Framing moulding or edge-lit halo option"
+          },
+          "fulfillment": {
+            "type": "string",
+            "enum": ["pdx-dropship", "pdx-courier", "beards-willcall", "jls-closing-gift", "goodwill-expedition"],
+            "description": "Delivery or local partner pickup option"
+          }
+        }
+      }
+    },
+    {
+      "name": "curate_room_with_ai",
+      "description": "Analyzes a natural-language interior design brief and budget to recommend and automatically stage a harmonious print, wall paint, substrate, and framing spec. Use when the user describes their room, lighting, or budget.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "design_brief": {
+            "type": "string",
+            "description": "User description of their room, wall color, mood, lighting, or target budget"
+          }
+        },
+        "required": ["design_brief"]
+      }
+    },
+    {
+      "name": "initiate_paypal_checkout",
+      "description": "Prepares an itemized PayPal Orders v2 checkout ledger for the staged artwork and focuses the PayPal confirmation controls so the buyer can review and approve payment. Use when the user is ready to purchase.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "buyer_note": {
+            "type": "string",
+            "description": "Optional gift dedication or framing note to attach to the order summary"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Search wilderness prints for forest study",
+    "messages": [
+      {
+        "role": "user",
+        "type": "message",
+        "content": "Show me misty old-growth forest prints in the wilderness collection."
+      }
+    ],
+    "expectedCall": [
+      {
+        "name": "search_fine_art_prints",
+        "args": {
+          "query": { "$pattern": "misty|forest|old-growth" },
+          "domain": "wilderness"
+        }
+      }
+    ]
+  },
+  {
+    "name": "Curate executive office with AI under budget",
+    "messages": [
+      {
+        "role": "user",
+        "type": "message",
+        "content": "Curate a calm Pacific Northwest print for my executive office with navy walls under $750."
+      }
+    ],
+    "expectedCall": [
+      {
+        "name": "curate_room_with_ai",
+        "args": {
+          "design_brief": { "$pattern": "office.*navy|navy.*office" }
+        }
+      }
+    ]
+  },
+  {
+    "name": "Human-in-the-loop PayPal checkout initiation",
+    "messages": [
+      {
+        "role": "user",
+        "type": "message",
+        "content": "This walnut frame spec looks great. Let's check out with PayPal and add a closing gift note for the Petersons."
+      }
+    ],
+    "expectedCall": [
+      {
+        "name": "initiate_paypal_checkout",
+        "args": {
+          "buyer_note": { "$pattern": "Peterson" }
+        }
+      }
+    ]
+  }
+]

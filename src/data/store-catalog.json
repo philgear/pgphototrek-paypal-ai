@@ -1,0 +1,2090 @@
+[
+  {
+    "id": "pg-diamond-8",
+    "title": "Trail Heritage: Iroquois Trail 'Unity' Marker & Woodland Green",
+    "desc": "A hand-carved trail standard depicting five arrows clasped in unity from the historic Iroquois Trail, framed by vibrant green summer ferns and mossy timber.",
+    "src": "/images/vault/diamonds/anchor_kells_2024-07-27_163245_ILCE-7RM3A_200mm_f292411312.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Historic Wilderness Trail System, Oregon",
+    "score": 151.4,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.418,
+      0.42
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#1E3A8A",
+        "paintName": "Rodda CA198 Granite Cliff",
+        "paintCode": "CA198",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Gothic bridge steel and dark Cascade granite"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-37",
+    "title": "High Desert Sentinel: Townsend's Solitaire on Western Juniper Apex",
+    "desc": "A solitary Townsend's Solitaire songbird surveys the high desert volcanic rimrock from the wind-bent needle apex of an ancient Western Juniper against open cobalt skies.",
+    "src": "/images/vault/diamonds/anchor_kells_2024-11-19_135228_ILCE-7RM3A_200mm_f591581728.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Crooked River Gorge, Central Oregon",
+    "score": 149,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.539,
+      0.419
+    ],
+    "solarPhase": "Directional Sidelight",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#F8F5E8",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-marsh-park",
+    "title": "Marsh Park: Sedge Meadows & Freshwater Riparian Sanctuary",
+    "desc": "Expansive freshwater marshes and native reedbeds teeming with seasonal waterfowl, framed by towering Pacific Northwest alders.",
+    "src": "/images/vault/master_194_MarshPark.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/200s at f/8.0, ISO 100",
+    "location": "Marsh Park, Washington",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.488,
+      0.428
+    ],
+    "solarPhase": "Blue Hour Twilight",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#4ADE80",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#F8F5E8",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-skidaway",
+    "title": "The Intact Horizon: Ancient Live Oaks & Spanish Moss",
+    "desc": "Centuries-old maritime forest live oaks draped in streaming silver Spanish moss overlooking coastal marsh humus.",
+    "src": "/images/vault/master_207_skidawayislandstatepark.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/200s at f/5.6, ISO 100",
+    "location": "Skidaway Island State Park, Georgia",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.489,
+      0.48
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-tualatin-hills",
+    "title": "Tualatin Hills Nature Park: Coniferous Canopy & Wetland Boardwalk",
+    "desc": "Protected wetland sanctuary featuring native Douglas firs, cedar swamps, and wooden boardwalks winding through primeval Oregon temperate forest.",
+    "src": "/images/vault/master_213_Tualatin_Hills_Nature_Park.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/125s at f/5.6, ISO 200",
+    "location": "Beaverton, Oregon",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.486,
+      0.475
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#4ADE80",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      }
+    ]
+  },
+  {
+    "id": "dest-smith-rock-tuff",
+    "title": "Smith Rock Red Volcanic Tuff & Crooked River",
+    "desc": "Towering sheer red volcanic ash tuff cliffs bathed in golden desert light over the Crooked River gorge.",
+    "src": "/images/gallery/originals/pg-fine-smith-rock-sensor-raw.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/250s at f/5.6, ISO 100",
+    "location": "Pacific Northwest",
+    "score": 100,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.5,
+      0.42
+    ],
+    "solarPhase": "Golden Hour Alpenglow",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1E3527",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#2E473B",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#D6A874",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#3B4048",
+        "paintName": "Rodda CA198 Granite Cliff",
+        "paintCode": "CA198",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Gothic bridge steel and dark Cascade granite"
+      },
+      {
+        "hex": "#E8E7E0",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      }
+    ]
+  },
+  {
+    "id": "dest-painted-hills-strata",
+    "title": "Painted Hills Stratified Clay Formations",
+    "desc": "Layers of ochre, gold, and vermilion mineral soils recording 35 million years of geological history.",
+    "src": "/images/gallery/originals/pg-fine-painted-hills-sensor-raw.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/250s at f/5.6, ISO 100",
+    "location": "Pacific Northwest",
+    "score": 100,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.5,
+      0.42
+    ],
+    "solarPhase": "Golden Hour Alpenglow",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1E3527",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#2E473B",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#D6A874",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#3B4048",
+        "paintName": "Rodda CA198 Granite Cliff",
+        "paintCode": "CA198",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Gothic bridge steel and dark Cascade granite"
+      },
+      {
+        "hex": "#E8E7E0",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      }
+    ]
+  },
+  {
+    "id": "pg-real-9",
+    "title": "Cape Perpetua Basalt Chasm & Ocean Spindrift",
+    "desc": "Violent Pacific swells and crashing ocean surf breaking against rugged volcanic basalt formations at Cape Perpetua.",
+    "src": "/images/vault/20220615_120000_cape_perpetua_DSC04450.webp",
+    "telemetry": "Sony Alpha 7R III  FE 24-70mm f/2.8 GM II  1/250s at f/8.0, ISO 100",
+    "location": "Cape Perpetua Marine Scenic Area, Yachats, Oregon",
+    "score": 95,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.5,
+      0.42
+    ],
+    "solarPhase": "Daylight Telemetry",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#2D4A3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#4A6B53",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#8A795D",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-real-8",
+    "title": "Cape Perpetua Coastal Sitka Spruce & Marine Bluff",
+    "desc": "Weather-beaten Sitka spruce trees overlooking churning Pacific surf along the high marine terrace at Cape Perpetua.",
+    "src": "/images/vault/20220615_120000_cape_perpetua_DSC04448.webp",
+    "telemetry": "Sony Alpha 7R III  FE 24-70mm f/2.8 GM II  1/250s at f/8.0, ISO 100",
+    "location": "Cape Perpetua Marine Scenic Area, Yachats, Oregon",
+    "score": 94,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.5,
+      0.42
+    ],
+    "solarPhase": "Golden Hour Telemetry",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#2D4A3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#4A6B53",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#8A795D",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-real-207",
+    "title": "Skidaway Island Maritime Forest Live Oaks & Spanish Moss",
+    "desc": "Twisting ancient live oak boughs draped in silver Spanish moss above salt marsh coastal wetlands.",
+    "src": "/images/vault/20221120_141000_skidaway_MaritimeForest.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/250s at f/5.6, ISO 100",
+    "location": "Skidaway Island, Georgia",
+    "score": 96,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.5,
+      0.42
+    ],
+    "solarPhase": "Golden Hour Alpenglow",
+    "domain": "wilderness",
+    "paintPalette": [
+      {
+        "hex": "#1E3527",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#2E473B",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#D6A874",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#3B4048",
+        "paintName": "Rodda CA198 Granite Cliff",
+        "paintCode": "CA198",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Gothic bridge steel and dark Cascade granite"
+      },
+      {
+        "hex": "#E8E7E0",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-multnomah",
+    "title": "Multnomah Falls: Two-Tier Basalt Chasm & Mist",
+    "desc": "620-foot two-tiered waterfall plunging into a deep amphitheater of Miocene basalt and lush temperate mosses.",
+    "src": "/images/gallery/originals/pg-fine-multnomah-sensor-raw.webp",
+    "telemetry": "Sony Alpha 7R III • FE 16-35mm f/2.8 GM II • 1/8s at f/11.0, ISO 100",
+    "location": "Columbia River Gorge, Oregon",
+    "score": 140,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.48,
+      0.463
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-laurelhurst-pond",
+    "title": "Laurelhurst Park: Historic Fir Reflections & Still Waters",
+    "desc": "Pristine mirror reflections of century-old native conifers and weeping willows on the historic Olmsted-designed park waters.",
+    "src": "/images/vault/20220620_103000_laurelhurst_PondMirror.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/160s at f/8.0, ISO 100",
+    "location": "Laurelhurst Park, Portland, Oregon",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.444,
+      0.58
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-kirkland-marina",
+    "title": "Kirkland Marina Pavilion: Pier Piles & Lake Washington Embayment",
+    "desc": "Architectural lakeside pavilion and weathered timber pier pilings reaching out into the cool waters of Lake Washington.",
+    "src": "/images/vault/master_190_kirkland_marina_pavilon.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/250s at f/7.1, ISO 100",
+    "location": "Kirkland, Washington",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.492,
+      0.563
+    ],
+    "solarPhase": "Blue Hour Twilight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#8B1E2B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-camas-anglers",
+    "title": "Columbia River Anglers: Dawn Casting at Camas Slough",
+    "desc": "Solitary anglers working the misty river currents where the Lacamas waters join the mighty Columbia, silhouetted against dawn alpenglow.",
+    "src": "/images/vault/20220518_175516_columbia_river_CamasAnglers.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/400s at f/8.0, ISO 200",
+    "location": "Camas, Columbia River",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.465,
+      0.475
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#C2C1BD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#028090",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-cape-perpetua-real",
+    "title": "Cape Perpetua Marine Reserve: Basalt Sea Cliffs & Pacific Marine Layer",
+    "desc": "Authentic coastal study of wave-carved basalt formations, ancient sea stacks, and Pacific marine layer mist at Cape Perpetua.",
+    "src": "/images/vault/20220615_120000_cape_perpetua_DSC04450.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/160s at f/8.0, ISO 100",
+    "location": "Cape Perpetua Marine Reserve, Oregon Coast",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.487,
+      0.452
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#028090",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-willamette-park",
+    "title": "Willamette Park: River Landing, Driftwood & Current Eddies",
+    "desc": "Gentle riparian shoreline along the Willamette River, featuring natural river stone gravel, driftwood silhouetted against calm eddies, and native cottonwoods.",
+    "src": "/images/vault/master_214_willamettepark.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/200s at f/7.1, ISO 100",
+    "location": "Willamette Park, Portland, Oregon",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.514,
+      0.442
+    ],
+    "solarPhase": "Blue Hour Twilight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#8B1E2B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-riverplace",
+    "title": "Riparian Twilight: Moored Hulls & Cobalt Willamette Currents",
+    "desc": "Sailboat masts swaying at twilight along the Willamette River marina promenade, reflecting deep cobalt water currents.",
+    "src": "/images/vault/master_206_riverplacepdx.webp",
+    "telemetry": "Sony Alpha 7R III • FE 35mm f/1.4 GM • 1/60s at f/2.8, ISO 800",
+    "location": "RiverPlace Marina, Portland",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.497,
+      0.341
+    ],
+    "solarPhase": "Blue Hour Twilight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#C2C1BD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-music-city-riverfront",
+    "title": "Music City Riverfront: Historic Paddlewheel & Cumberland River Reflections",
+    "desc": "Vibrant evening waterfront capture featuring the historic Cumberland riverboat moored beneath illuminated truss bridges, cast in cobalt and amber river reflections.",
+    "src": "/images/vault/master_199_Music_City_Riverfront.webp",
+    "telemetry": "Sony Alpha 7R III • FE 24-70mm f/2.8 GM II • 1/125s at f/8.0, ISO 100",
+    "location": "Cumberland River, Nashville",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.487,
+      0.402
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "water",
+    "paintPalette": [
+      {
+        "hex": "#028090",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#4ADE80",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-5",
+    "title": "Two-Lane Heritage: Weathered Hydrant & Summer Cyclist in Motion",
+    "desc": "High-shutter street study focusing on a weathered canary-yellow municipal hydrant with red bonnet caps as an endurance road cyclist flashes past in dynamic kinetic blur.",
+    "src": "/images/vault/diamonds/anchor_kells_2025-07-27_133115_ILCE-7RM3A_90mm_f587674976.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 90mm F2.8 Macro G OSS • 90mm",
+    "location": "Historic Columbia River Highway Corridor, Oregon",
+    "score": 153,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.608,
+      0.439
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-4",
+    "title": "Americana in Red Clay: 'VISITORS' Dugout & Infield Chainlink",
+    "desc": "Nostalgic slice of Pacific Northwest sports heritage featuring crisp white stenciled block letters on a painted green dugout wall, heavy steel padlock gate, and sunlit crimson infield dirt.",
+    "src": "/images/vault/diamonds/anchor_kells_2023-12-07_133306_ILCE-7RM3A_90mm_f248863592.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 90mm F2.8 Macro G OSS • 90mm",
+    "location": "Community Ballpark, Willamette Valley, Oregon",
+    "score": 153,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.593,
+      0.437
+    ],
+    "solarPhase": "Directional Sidelight",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#F8F5E8",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-30",
+    "title": "Urban Nocturne: Saint Laurent Holiday Lights & Falling Snow",
+    "desc": "Soft, illuminated holiday snowflakes cascade past the warm incandescent glow and high-contrast marble architecture of a luxury storefront on a quiet winter night.",
+    "src": "/images/vault/diamonds/anchor_rubaiyat_2024-12-12_190134_ILCE-7RM3A_200mm_f628953128.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Downtown Portland Cultural District, Oregon",
+    "score": 150,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.475,
+      0.453
+    ],
+    "solarPhase": "Nocturnal / Celestial",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-34",
+    "title": "Mid-Century Minimal: Triad Luminaire on Teal Steel Beam",
+    "desc": "A minimalist color-field study juxtaposing three spherical white marquee luminaire globes mounted in vertical cadence along a painted teal structural I-beam against soft woodland bokeh.",
+    "src": "/images/vault/diamonds/anchor_kells_2024-07-06_110820_ILCE-7RM3A_200mm_f280714296.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Historic Architectural Pavilion, Oregon",
+    "score": 149.4,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.49,
+      0.431
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#028090",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-83",
+    "title": "Riparian Twilight: Wildlife Refuge Pavilion & Heron Fretwork",
+    "desc": "Golden hour illuminates an architectural timber shelter adorned with laser-cut steel great blue heron silhouettes, overlooking wetlands as dusk settles across the Willamette Basin.",
+    "src": "/images/vault/diamonds/anchor_rubaiyat_2023-08-22_192905_ILCE-7RM3A_90mm_f467084336.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 90mm F2.8 Macro G OSS • 90mm",
+    "location": "Tualatin River National Wildlife Refuge, Oregon",
+    "score": 148,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.439,
+      0.437
+    ],
+    "solarPhase": "Golden Hour Alpenglow",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#1E3A8A",
+        "paintName": "Rodda CA198 Granite Cliff",
+        "paintCode": "CA198",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Gothic bridge steel and dark Cascade granite"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#F8F5E8",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-pdxwlf",
+    "title": "Portland Winter Light Festival: Prismatic Lanterns at Twilight",
+    "desc": "Towering crystalline illumination and wet brick reflections in the city center during the Portland Winter Light Festival.",
+    "src": "/images/events/02-00-2026-pdxwlf/DSC02919.webp",
+    "telemetry": "Sony Alpha 7R III • FE 35mm f/1.4 GM • 1/60s at f/1.8, ISO 1600",
+    "location": "Pioneer Courthouse Square, Portland",
+    "score": 140,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.457,
+      0.454
+    ],
+    "solarPhase": "Blue Hour Twilight",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#0B132B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#028090",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#F5D061",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#C14953",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#F6F0E0",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-steelbridge",
+    "title": "Benchmark 45°31′N: Riveted Girders & Independent Lift Span",
+    "desc": "Dramatic geometric truss work and heavy riveted steel girders of the historic 1912 independent double-lift span.",
+    "src": "/images/vault/master_208_steelbridge.webp",
+    "telemetry": "Sony Alpha 7R III • FE 16-35mm f/2.8 GM II • 1/125s at f/8.0, ISO 100",
+    "location": "Willamette River, Portland",
+    "score": 140,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.504,
+      0.528
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "built",
+    "paintPalette": [
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#1A2238",
+        "paintName": "Miller NW045 Puget Sound Twilight",
+        "paintCode": "NW045",
+        "brand": "Miller Paint",
+        "family": "blue",
+        "desc": "Nautical twilight and deep Salish Sea indigo"
+      },
+      {
+        "hex": "#C2C1BD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-3",
+    "title": "Botanical Microcosm: Golden Sunburst Cup Lichen on Old-Growth Branch",
+    "desc": "High-magnification 90mm optical study of Xanthoria polycarpa cup lichen encrusting an old-growth twig, revealing chartreuse apothecia disks and velvety fungal micro-textures.",
+    "src": "/images/vault/diamonds/anchor_kells_2023-04-11_094744_ILCE-7RM3A_90mm_f589471328.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 90mm F2.8 Macro G OSS • 90mm",
+    "location": "Cascadia Rainforest Canopy, Oregon",
+    "score": 153,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.59,
+      0.43
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "macro",
+    "paintPalette": [
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-11",
+    "title": "Botanical Microcosm: Spring Raindrops on Star Magnolia Bud",
+    "desc": "A fragile emerging blush-pink Star Magnolia blossom beaded with crystalline Pacific Northwest spring raindrops, rendered in painterly 90mm macro bokeh.",
+    "src": "/images/vault/diamonds/anchor_kells_2023-03-31_154943_ILCE-7RM3A_90mm_f589592344.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 90mm F2.8 Macro G OSS • 90mm",
+    "location": "Crystal Springs Rhododendron Garden, Portland, Oregon",
+    "score": 150.2,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.4,
+      0.415
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "macro",
+    "paintPalette": [
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-14",
+    "title": "Botanical Microcosm: Solitary Ant on Painted Azure Pine",
+    "desc": "A razor-sharp telephoto macro isolate capturing a solitary ant navigating the clean beveled edge of a forest trail sign, pairing weathered wood grain with brilliant sky-blue and coral lacquer.",
+    "src": "/images/vault/diamonds/anchor_kells_2024-07-06_110704_ILCE-7RM3A_200mm_f280557944.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Woodland Trailhead, Oregon",
+    "score": 150,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.519,
+      0.437
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "macro",
+    "paintPalette": [
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#4ADE80",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-40",
+    "title": "Urban Botanical: Twin Calibrachoa Spheres on Cast Lamppost",
+    "desc": "Lush suspended hanging baskets overflowing with deep amethyst and golden sunburst million-bells flowers frame a brushed municipal lamppost in crisp summer light.",
+    "src": "/images/vault/diamonds/anchor_kells_2025-07-26_175038_ILCE-7RM3A_200mm_f595485280.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Pearl District Promenade, Portland, Oregon",
+    "score": 148.2,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.444,
+      0.458
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "macro",
+    "paintPalette": [
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-zen-flute-player",
+    "title": "Zen Stone Flute Player — Japanese Garden Miniature",
+    "desc": "Weathered granite flute player sculpture nestled in emerald moss, rendered as a hand-painted Sumi-e river stone miniature.",
+    "src": "/images/gallery/stylized/pebble/pebble-zen-stone-flute-player.webp",
+    "telemetry": "Sony Alpha 7R III • FE 50mm F1.8 • 1/200s at f/2.8, ISO 200",
+    "location": "Portland Japanese Garden",
+    "score": 140,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.487,
+      0.441
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "macro",
+    "paintPalette": [
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#F8F5E8",
+        "paintName": "Rodda CA002 Alabaster Fog",
+        "paintCode": "CA002",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Warm gallery exhibition linen & morning mist"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      }
+    ]
+  },
+  {
+    "id": "pg-fine-tree-knothole",
+    "title": "Botanical Microcosm: Rare Fungi in Old-Growth Knothole",
+    "desc": "Delicate frilled mushroom thriving deep inside a moss-draped knothole cavity with tiny spiders navigating intricate bark crevasses.",
+    "src": "/images/vault/master_4_butwhatkindisit.webp",
+    "telemetry": "Sony Alpha 7R III • FE 90mm f/2.8 Macro G OSS • 1/125s at f/4.5, ISO 400",
+    "location": "Pacific Northwest Old-Growth Forest",
+    "score": 132,
+    "isCrownDiamond": false,
+    "focalCenter": [
+      0.551,
+      0.457
+    ],
+    "solarPhase": "Golden Hour Sidelight",
+    "domain": "macro",
+    "paintPalette": [
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#8B1E2B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-1",
+    "title": "Día de los Muertos: La Catrina with Dual Rose Crowns & Marigold Regalia",
+    "desc": "Exquisite handcrafted Día de los Muertos folk monument of La Catrina, crowned in sculpted pink roses, hand-painted sugar skull calavera motifs, and vibrant marigold satin.",
+    "src": "/images/vault/diamonds/anchor_kells_2025-08-15_174600_ILCE-7RM3A_200mm_f701180696.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Woodburn Cultural Plaza, Oregon",
+    "score": 155,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.584,
+      0.431
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "events",
+    "paintPalette": [
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-18",
+    "title": "Willamette Greenway: The Twin Stroller Marathoner on Naito",
+    "desc": "A dynamic capture of urban endurance as a marathon runner powers down the elm-lined Willamette greenway on SW Naito Parkway pushing a twin stroller, escorted by Portland motorcade.",
+    "src": "/images/vault/diamonds/anchor_kells_2025-04-13_093111_ILCE-7RM3A_200mm_f629271512.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Naito Parkway, Portland, Oregon",
+    "score": 150,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.523,
+      0.399
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "events",
+    "paintPalette": [
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-28",
+    "title": "Fiesta Mexicana Woodburn: Mariachi Performance on Park Stage",
+    "desc": "Live celebratory cultural performance at Oregon's historic Fiesta Mexicana, featuring Mariachi musicians in embroidered traje de charro under the vaulted festival canopy.",
+    "src": "/images/vault/diamonds/anchor_kells_2025-08-15_174905_ILCE-7RM3A_200mm_f701141672.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 70-200mm F2.8 GM OSS • 200mm",
+    "location": "Legion Park, Woodburn, Oregon",
+    "score": 150,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.49,
+      0.414
+    ],
+    "solarPhase": "High-Contrast Daylight",
+    "domain": "events",
+    "paintPalette": [
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#1E3A8A",
+        "paintName": "Rodda CA198 Granite Cliff",
+        "paintCode": "CA198",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Gothic bridge steel and dark Cascade granite"
+      },
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#18181B",
+        "paintName": "Miller NW010 Obsidian Basalt",
+        "paintCode": "NW010",
+        "brand": "Miller Paint",
+        "family": "neutral",
+        "desc": "High Cascade volcanic glass & modernist velvet dark"
+      }
+    ]
+  },
+  {
+    "id": "pg-diamond-41",
+    "title": "Worst Day of the Year Ride: Cyclists Gathering on Industrial Southeast",
+    "desc": "Portland cyclists in hi-vis windbreakers, winter caps, and fenders muster at dawn for the legendary Worst Day of the Year Ride beneath the towering Woman Life Freedom street mural.",
+    "src": "/images/vault/diamonds/anchor_kells_2023-03-19_085854_ILCE-7RM3A_90mm_f700824024.jpg",
+    "telemetry": "Sony Alpha 7R III • FE 90mm F2.8 Macro G OSS • 90mm",
+    "location": "Central Eastside Industrial District, Portland, Oregon",
+    "score": 148,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.491,
+      0.417
+    ],
+    "solarPhase": "Directional Sidelight",
+    "domain": "events",
+    "paintPalette": [
+      {
+        "hex": "#B85D3B",
+        "paintName": "Miller H0010 Painted Hills Terracotta",
+        "paintCode": "H0010",
+        "brand": "Miller Paint",
+        "family": "ochre",
+        "desc": "Volcanic welded tuff and sunset sandstone"
+      },
+      {
+        "hex": "#1B4D3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#CDD2CD",
+        "paintName": "Rodda CA184 River Pebble Gray",
+        "paintCode": "CA184",
+        "brand": "Rodda Paint",
+        "family": "neutral",
+        "desc": "Columbia River basalt & stream-polished pebble"
+      },
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#D4AF37",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  },
+  {
+    "id": "pg-real-1953",
+    "title": "Two-Lane Americana Vintage Tailfin & Contour Study",
+    "desc": "Nocturnal chrome reflections and mid-century automotive contours bathed in streetlamp glow.",
+    "src": "/images/vault/20181202_013526_pdx_night_DSC00280.webp",
+    "telemetry": "Sony Alpha 7R III  FE 24-70mm f/2.8 GM II  1/250s at f/8.0, ISO 100",
+    "location": "Pacific Coast Highway, Oregon",
+    "score": 100,
+    "isCrownDiamond": true,
+    "focalCenter": [
+      0.5,
+      0.42
+    ],
+    "solarPhase": "Daylight Telemetry",
+    "domain": "automotive",
+    "paintPalette": [
+      {
+        "hex": "#1B382B",
+        "paintName": "Rodda CA092 Cascade Douglas Fir",
+        "paintCode": "CA092",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Deep old-growth coniferous pine"
+      },
+      {
+        "hex": "#2D4A3E",
+        "paintName": "Rodda CA084 Rainforest Moss",
+        "paintCode": "CA084",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Misty temperate rainforest canopy"
+      },
+      {
+        "hex": "#4A6B53",
+        "paintName": "Rodda CA152 Coastal Marine Fog",
+        "paintCode": "CA152",
+        "brand": "Rodda Paint",
+        "family": "blue",
+        "desc": "Pacific coastal marine layer and river fog"
+      },
+      {
+        "hex": "#8A795D",
+        "paintName": "Rodda CA073 Alpine Lichen",
+        "paintCode": "CA073",
+        "brand": "Rodda Paint",
+        "family": "green",
+        "desc": "Subalpine moss and weathered rock lichen"
+      },
+      {
+        "hex": "#D4A373",
+        "paintName": "Rodda CA223 Sunstone Ochre",
+        "paintCode": "CA223",
+        "brand": "Rodda Paint",
+        "family": "ochre",
+        "desc": "High desert Oregon sunstone & rhyolite cliffs"
+      }
+    ]
+  }
+]

@@ -1,0 +1,252 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+import StoreLayout from '../layouts/StoreLayout.astro';
+import catalog from '../data/store-catalog.json';
+
+const rawBase = import.meta.env.BASE_URL || '/';
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<StoreLayout
+  title="SHA-256 Certificate of Authenticity — Phil Gear Fine Art"
+  description="Cryptographic provenance certificate linked to PayPal Orders v2 settlement and archival substrate specifications."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 print:py-0 print:px-0">
+    <!-- Interactive Toolbar (Hidden when printing) -->
+    <div class="mb-6 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-slate-900/90 border border-slate-800 rounded-xl p-4 print:hidden">
+      <div class="flex items-center gap-3 flex-1">
+        <label for="coa-artwork-picker" class="text-xs font-mono text-slate-300 whitespace-nowrap">
+          Preview Edition:
+        </label>
+        <select
+          id="coa-artwork-picker"
+          class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-amber-400"
+        >
+          {catalog.map((item) => (
+            <option value={item.id} data-title={item.title} data-telemetry={item.telemetry} data-src={item.src}>
+              {item.title} ({item.domain})
+            </option>
+          ))}
+        </select>
+      </div>
+      <div class="flex items-center gap-2">
+        <button
+          id="print-coa-btn"
+          type="button"
+          class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-mono text-xs font-black uppercase cursor-pointer transition-colors"
+        >
+          <i class="fas fa-print"></i>
+          <span>Print / Save PDF</span>
+        </button>
+        <a
+          href={`${base}`}
+          class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-mono text-xs border border-slate-700 transition-colors"
+        >
+          <i class="fas fa-store"></i>
+          <span>Store</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Archival Certificate Bond Sheet -->
+    <article class="rounded-2xl border-2 border-amber-500/50 bg-[#fdfbf7] text-slate-900 shadow-2xl p-6 sm:p-12 relative overflow-hidden print:shadow-none print:border-amber-700">
+      <div class="border border-amber-700/30 rounded-xl p-6 sm:p-10 space-y-8">
+        <!-- Header Crest -->
+        <div class="text-center border-b border-amber-900/20 pb-6">
+          <p class="font-mono text-[11px] uppercase tracking-[0.28em] text-amber-800 font-bold">
+            Phil Gear Photography • Pacific Northwest Archival Registry
+          </p>
+          <h1 class="font-pocketgull text-3xl sm:text-4xl font-black text-slate-950 mt-2 tracking-tight">
+            Certificate of Authenticity & Provenance
+          </h1>
+          <p class="text-xs font-mono text-slate-600 mt-1">
+            Bound to PayPal Orders v2 Settlement & Web Crypto SHA-256 Registry
+          </p>
+        </div>
+
+        <!-- Artwork Preview & Primary Metadata -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 items-center">
+          <div class="md:col-span-2 bg-slate-100 p-3 rounded-xl border border-slate-300 shadow-inner">
+            <img
+              id="coa-artwork-img"
+              src={`${base}${catalog[0].src.replace(/^\//, '')}`}
+              alt={catalog[0].title}
+              class="w-full h-48 object-contain rounded"
+            />
+          </div>
+          <div class="md:col-span-3 space-y-3">
+            <div>
+              <span class="text-[10px] font-mono uppercase tracking-wider text-amber-800 font-bold">Registered Fine Art Plate</span>
+              <h2 id="coa-title" class="font-pocketgull text-2xl font-black text-slate-950">
+                {catalog[0].title}
+              </h2>
+              <p id="coa-telemetry" class="text-xs font-mono text-slate-600 mt-0.5">
+                {catalog[0].telemetry}
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3 pt-2 text-xs font-mono border-t border-slate-200">
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Dimensions</span>
+                <span id="coa-size" class="font-bold text-slate-900">24x36" (1:10 Verified)</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Archival Medium</span>
+                <span id="coa-substrate" class="font-bold text-slate-900">TruLife Face-Mount Acrylic</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Framing Profile</span>
+                <span id="coa-framing" class="font-bold text-slate-900">Borderless Gallery Float Mount</span>
+              </div>
+              <div>
+                <span class="text-slate-500 block text-[10px] uppercase">Calibrated Wall Paint</span>
+                <span id="coa-paint" class="font-bold text-slate-900">Rodda CA002 Alabaster Fog</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settlement & SHA-256 Block -->
+        <div class="bg-slate-100 border border-slate-300 rounded-xl p-4 space-y-2.5 font-mono text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div>
+              <span class="text-[10px] uppercase text-slate-500 block">PayPal Order ID</span>
+              <span id="coa-order-id" class="font-bold text-slate-900 break-all">PAYPAL-SBX-VERIFIED</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-slate-500 block">Capture Reference</span>
+              <span id="coa-capture-id" class="font-bold text-slate-900 break-all">CAP-ARCHIVAL-EDITION</span>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase text-slate-500 block">Timestamp (UTC)</span>
+              <span id="coa-timestamp" class="font-bold text-slate-900">2026-11-12T18:00:00Z</span>
+            </div>
+          </div>
+          <div class="pt-2 border-t border-slate-300">
+            <span class="text-[10px] uppercase text-amber-900 font-bold block mb-1">
+              Immutable SHA-256 Provenance Digest
+            </span>
+            <code id="coa-sha256" class="block text-[11px] bg-white border border-slate-300 rounded px-2.5 py-1.5 text-slate-800 break-all">
+              Computing Web Crypto SHA-256 digest...
+            </code>
+          </div>
+        </div>
+
+        <!-- Attestation Footer -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-amber-900/20 items-end">
+          <div class="text-xs text-slate-600 leading-relaxed">
+            This masterwork is produced using archival pigment and museum-grade glazing in Portland, Oregon. Its provenance hash cryptographically binds the collector's PayPal Orders v2 capture to the exact substrate, dimensions, and architectural color calibration.
+          </div>
+          <div class="sm:text-right">
+            <div class="font-pocketgull text-2xl italic font-bold text-slate-900 border-b border-slate-400 inline-block px-4 pb-1">
+              Phil Gear
+            </div>
+            <p class="font-mono text-[10px] uppercase tracking-wider text-slate-500 mt-1">
+              Artist & Master Printer • Portland, Oregon
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <script>
+    import { computeProvenanceSha256 } from '../lib/paypal-orders';
+
+    function getBasePrefix(): string {
+      const b = document.documentElement.getAttribute('data-base-url') || '/';
+      return b.endsWith('/') ? b : `${b}/`;
+    }
+
+    async function initCertificatePage() {
+      const base = getBasePrefix();
+      const params = new URLSearchParams(window.location.search);
+      const picker = document.getElementById('coa-artwork-picker') as HTMLSelectElement | null;
+      const printBtn = document.getElementById('print-coa-btn');
+      const imgEl = document.getElementById('coa-artwork-img') as HTMLImageElement | null;
+
+      printBtn?.addEventListener('click', () => window.print());
+
+      let stored: any = null;
+      try {
+        const raw = sessionStorage.getItem('pg_latest_paypal_receipt');
+        if (raw) stored = JSON.parse(raw);
+      } catch {}
+
+      const setText = (id: string, val: string) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = val;
+      };
+
+      async function renderFromReceiptOrSelection(overrideOption?: HTMLOptionElement) {
+        if (overrideOption) {
+          const title = overrideOption.getAttribute('data-title') || 'Fine Art Print';
+          const telemetry = overrideOption.getAttribute('data-telemetry') || '';
+          const src = (overrideOption.getAttribute('data-src') || '').replace(/^\//, '');
+          setText('coa-title', title);
+          setText('coa-telemetry', telemetry);
+          if (imgEl && src) {
+            imgEl.src = `${base}${src}`;
+            imgEl.alt = title;
+          }
+          const nowIso = new Date().toISOString();
+          setText('coa-timestamp', nowIso);
+          const digest = await computeProvenanceSha256(
+            JSON.stringify({ artworkId: overrideOption.value, title, previewedAt: nowIso })
+          );
+          setText('coa-sha256', digest);
+          return;
+        }
+
+        const title = params.get('title') || stored?.spec?.title;
+        const size = params.get('size') || stored?.spec?.size || '24x36';
+        const substrate = params.get('substrate') || stored?.spec?.substrateName || 'TruLife Face-Mount Acrylic';
+        const framing = params.get('framing') || stored?.spec?.framingName || 'Borderless Gallery Float Mount';
+        const paint = params.get('paint') || stored?.spec?.paintSpec || 'Rodda CA002 Alabaster Fog';
+        const orderId = params.get('orderId') || stored?.orderId || 'PAYPAL-SBX-EDITION-01';
+        const captureId = params.get('captureId') || stored?.captureId || 'CAP-ARCHIVAL-01';
+        const timestamp = stored?.capturedAtIso || new Date().toISOString();
+
+        if (title && picker) {
+          const matchOpt = Array.from(picker.options).find(
+            (o) => o.getAttribute('data-title') === title || o.value === stored?.spec?.artworkId
+          );
+          if (matchOpt) {
+            picker.value = matchOpt.value;
+            const src = (matchOpt.getAttribute('data-src') || '').replace(/^\//, '');
+            const telemetry = matchOpt.getAttribute('data-telemetry') || '';
+            if (imgEl && src) {
+              imgEl.src = `${base}${src}`;
+              imgEl.alt = title;
+            }
+            if (telemetry) setText('coa-telemetry', telemetry);
+          }
+          setText('coa-title', title);
+        }
+
+        setText('coa-size', `${size}" (1:10 Verified)`);
+        setText('coa-substrate', substrate);
+        setText('coa-framing', framing);
+        setText('coa-paint', paint);
+        setText('coa-order-id', orderId);
+        setText('coa-capture-id', captureId);
+        setText('coa-timestamp', timestamp);
+
+        const sha =
+          params.get('sha256') ||
+          stored?.provenanceSha256 ||
+          (await computeProvenanceSha256(JSON.stringify({ orderId, captureId, title, size, substrate })));
+        setText('coa-sha256', sha);
+      }
+
+      picker?.addEventListener('change', () => {
+        const opt = picker.selectedOptions[0];
+        if (opt) renderFromReceiptOrSelection(opt);
+      });
+
+      await renderFromReceiptOrSelection();
+    }
+
+    initCertificatePage();
+  </script>
+</StoreLayout>

@@ -1,0 +1,186 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+import StoreLayout from '../layouts/StoreLayout.astro';
+
+const rawBase = import.meta.env.BASE_URL || '/';
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+
+<StoreLayout
+  title="PayPal Order Captured — Phil Gear Fine Art Atelier"
+  description="PayPal Orders v2 payment confirmation and cryptographic SHA-256 Certificate of Authenticity release."
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="rounded-2xl border border-emerald-500/40 bg-slate-900/90 shadow-2xl overflow-hidden backdrop-blur-md">
+      <!-- Top Banner -->
+      <div class="bg-gradient-to-r from-emerald-950/90 via-slate-900 to-sky-950/90 px-6 sm:px-8 py-7 border-b border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="size-12 rounded-full bg-emerald-500/20 border-2 border-emerald-400 flex items-center justify-center text-emerald-300 text-xl shrink-0">
+            <i class="fas fa-check"></i>
+          </div>
+          <div>
+            <span id="receipt-env-pill" class="inline-block text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-400/40 mb-1">
+              PayPal Orders v2 • CAPTURED
+            </span>
+            <h1 class="font-pocketgull text-2xl sm:text-3xl font-black text-white tracking-tight">
+              Collector Commission Confirmed
+            </h1>
+          </div>
+        </div>
+        <div class="text-left sm:text-right font-mono">
+          <span class="text-[10px] uppercase tracking-wider text-slate-400 block">Total Settled (USD)</span>
+          <span id="receipt-total" class="text-2xl sm:text-3xl font-black text-amber-300">$910.00</span>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div class="p-6 sm:p-8 space-y-6">
+        <!-- PayPal Transaction IDs -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+          <div class="rounded-xl bg-slate-950/80 border border-slate-800 p-3.5">
+            <span class="text-slate-400 block text-[10px] uppercase">PayPal Order ID</span>
+            <span id="receipt-order-id" class="text-sky-300 font-bold break-all mt-1 block">—</span>
+          </div>
+          <div class="rounded-xl bg-slate-950/80 border border-slate-800 p-3.5">
+            <span class="text-slate-400 block text-[10px] uppercase">Capture Settlement ID</span>
+            <span id="receipt-capture-id" class="text-emerald-300 font-bold break-all mt-1 block">—</span>
+          </div>
+          <div class="rounded-xl bg-slate-950/80 border border-slate-800 p-3.5">
+            <span class="text-slate-400 block text-[10px] uppercase">Collector / Payer</span>
+            <span id="receipt-payer" class="text-white font-bold break-all mt-1 block">PayPal Collector</span>
+          </div>
+        </div>
+
+        <!-- Commissioned Specification -->
+        <div class="rounded-xl bg-slate-950/70 border border-slate-800 p-5">
+          <h2 class="text-xs font-mono uppercase tracking-wider text-amber-300 font-bold mb-3 flex items-center gap-2">
+            <i class="fas fa-Drafting-compass"></i>
+            <span>Itemized Architectural Print & Framing Specification</span>
+          </h2>
+          <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
+            <div>
+              <dt class="text-xs font-mono text-slate-400">Artwork Title</dt>
+              <dd id="receipt-title" class="font-bold text-white mt-0.5">Architectural Fine Art Print</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-mono text-slate-400">Dimensions (1:10 Verified)</dt>
+              <dd id="receipt-size" class="font-mono text-white mt-0.5">24x36"</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-mono text-slate-400">Archival Substrate</dt>
+              <dd id="receipt-substrate" class="text-slate-200 mt-0.5">TruLife Face-Mount Acrylic</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-mono text-slate-400">Custom Studio Framing</dt>
+              <dd id="receipt-framing" class="text-slate-200 mt-0.5">Borderless Gallery Float Mount</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-mono text-slate-400">Fulfillment & Studio Handoff</dt>
+              <dd id="receipt-fulfillment" class="text-slate-200 mt-0.5">Portland Fine Art Lab Direct Dropship</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-mono text-slate-400">Calibrated Wall Paint Harmony</dt>
+              <dd id="receipt-paint" class="font-mono text-amber-200 mt-0.5">Rodda CA002 Alabaster Fog</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Cryptographic Provenance Digest -->
+        <div class="rounded-xl bg-amber-950/20 border border-amber-500/30 p-4 font-mono text-xs">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <span class="text-amber-300 font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fas fa-shield-halved"></i>
+              <span>Web Crypto SHA-256 Provenance Digest</span>
+            </span>
+            <span class="text-[10px] text-emerald-300">1-of-1 Registered</span>
+          </div>
+          <code id="receipt-sha256" class="block text-[11px] text-slate-300 break-all bg-slate-950/90 p-2.5 rounded-lg border border-slate-800">
+            Verifying SHA-256 digest...
+          </code>
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2">
+          <a
+            id="coa-link-btn"
+            href={`${base}certificate/`}
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-mono text-xs font-black uppercase tracking-wider shadow-lg transition-all"
+          >
+            <i class="fas fa-certificate"></i>
+            <span>Open & Print 1-of-1 SHA-256 Certificate</span>
+          </a>
+
+          <a
+            href={`${base}`}
+            class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs font-bold border border-slate-700 transition-all"
+          >
+            <i class="fas fa-arrow-left"></i>
+            <span>Return to AI Atelier & Store</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function hydrateSuccessReceipt() {
+      const params = new URLSearchParams(window.location.search);
+      let stored: any = null;
+      try {
+        const raw = sessionStorage.getItem('pg_latest_paypal_receipt');
+        if (raw) stored = JSON.parse(raw);
+      } catch {}
+
+      const orderId = params.get('orderId') || stored?.orderId || 'PAYPAL-SBX-DEMO001';
+      const captureId = params.get('captureId') || stored?.captureId || 'CAP-DEMO001';
+      const env = params.get('env') || stored?.environment || 'paypal-sandbox-sdk';
+      const title = params.get('title') || stored?.spec?.title || 'Crown Point Twilight Solitude';
+      const size = params.get('size') || stored?.spec?.size || '24x36';
+      const substrate = params.get('substrate') || stored?.spec?.substrateName || 'TruLife Face-Mount Acrylic';
+      const framing = params.get('framing') || stored?.spec?.framingName || 'Borderless Gallery Float Mount';
+      const fulfillment = params.get('fulfillment') || stored?.spec?.fulfillmentName || 'Portland Fine Art Lab Direct Dropship';
+      const paint = params.get('paint') || stored?.spec?.paintSpec || 'Rodda CA002';
+      const total = Number(params.get('total') || stored?.spec?.totalUsd || 910);
+      const sha256 =
+        params.get('sha256') ||
+        stored?.provenanceSha256 ||
+        'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855';
+      const payer = stored?.payerName
+        ? `${stored.payerName} (${stored.payerEmail || 'verified'})`
+        : 'PayPal Sandbox Collector';
+
+      const setText = (id: string, val: string) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = val;
+      };
+
+      setText('receipt-order-id', orderId);
+      setText('receipt-capture-id', captureId);
+      setText('receipt-payer', payer);
+      setText('receipt-title', title);
+      setText('receipt-size', `${size}"`);
+      setText('receipt-substrate', substrate);
+      setText('receipt-framing', framing);
+      setText('receipt-fulfillment', fulfillment);
+      setText('receipt-paint', paint);
+      setText('receipt-total', `$${total.toFixed(2)}`);
+      setText('receipt-sha256', sha256);
+      setText(
+        'receipt-env-pill',
+        env.includes('live')
+          ? 'PayPal Live SDK • CAPTURED'
+          : env.includes('simulated')
+            ? 'PayPal Orders v2 • Judge Sandbox Capture'
+            : 'PayPal Sandbox SDK • CAPTURED'
+      );
+
+      const coaBtn = document.getElementById('coa-link-btn') as HTMLAnchorElement | null;
+      if (coaBtn && window.location.search) {
+        const baseHref = coaBtn.getAttribute('href') || 'certificate/';
+        coaBtn.href = `${baseHref.split('?')[0]}${window.location.search}`;
+      }
+    }
+
+    hydrateSuccessReceipt();
+  </script>
+</StoreLayout>

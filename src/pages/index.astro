@@ -1,0 +1,949 @@
+---
+// SPDX-License-Identifier: Apache-2.0
+import Layout from '../layouts/StoreLayout.astro';
+import catalogData from '../data/store-catalog.json';
+
+const rawBase = import.meta.env.BASE_URL || '/';
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+const withBase = (src: string) => `${base}${src.replace(/^\//, '')}`;
+
+const allPhotos = catalogData;
+const showcaseSelects = allPhotos.slice(0, 24);
+
+const pnwWallPaints = [
+  { brand: 'Rodda', code: 'CA002', name: 'Alabaster Fog', hex: '#E8E7E0' },
+  { brand: 'Miller', code: 'MW001', name: 'Museum Curatorial White', hex: '#F7F6F1' },
+  { brand: 'Miller', code: 'JLS04', name: 'Lake Oswego Linen', hex: '#EFECE6' },
+  { brand: 'Rodda', code: 'CA184', name: 'River Pebble Gray', hex: '#BFC2BE' },
+  { brand: 'Miller', code: 'NW045', name: 'Puget Sound Twilight', hex: '#1B243B' },
+  { brand: 'Rodda', code: 'CA092', name: 'Cascade Douglas Fir', hex: '#1E3527' },
+  { brand: 'Miller', code: 'H0010', name: 'Painted Hills Terracotta', hex: '#B85B38' },
+  { brand: 'Rodda', code: 'CA223', name: 'Sunstone Ochre', hex: '#D6A874' },
+  { brand: 'Miller', code: 'NW010', name: 'Obsidian Basalt', hex: '#1A1B1E' },
+];
+
+const substrates = [
+  {
+    id: 'acrylic',
+    shortName: '💎 UltraHD Acrylic',
+    name: 'UltraHD Borderless Acrylic Glass',
+    desc: 'Museum-grade 4mm optical acrylic with vivid depth and 100+ year Wilhelm rating.',
+    priceMultiplier: 1.4,
+  },
+  {
+    id: 'giclee',
+    shortName: '📜 Hahnemühle Rag',
+    name: 'Hahnemühle Photo Rag 308g (Fine Art Giclée)',
+    desc: '100% cotton rag with tactile matte surface and deep velvet blacks.',
+    priceMultiplier: 1.0,
+  },
+  {
+    id: 'metal',
+    shortName: '⚡ ChromaLuxe Metal',
+    name: 'ChromaLuxe Brushed Aluminum',
+    desc: 'Dye-infused aluminum panel with satin metallic sheen and moisture proofing.',
+    priceMultiplier: 1.25,
+  },
+];
+
+const beardsFramingProfiles = [
+  {
+    id: 'float',
+    shortName: 'Borderless Float',
+    name: 'Borderless Gallery Float Mount',
+    desc: 'Recessed aluminum French cleat backframe; floats 3/4" off the wall.',
+    addonPrice: 0,
+    frameBorder: '#1c1917',
+    frameWidth: '2px',
+    matBg: '#0c0a09',
+    matPad: '2px',
+  },
+  {
+    id: 'beards-black',
+    shortName: "Beard's Black + Mat",
+    name: "Beard's Framing Satin Black + 4-Ply Rag Mat",
+    desc: 'Hand-joined Portland satin black hardwood, 4-ply cotton rag mat & 99% UV glass.',
+    addonPrice: 140,
+    frameBorder: '#18181b',
+    frameWidth: '10px',
+    matBg: '#f5f4ee',
+    matPad: '14px',
+  },
+  {
+    id: 'beards-walnut',
+    shortName: "Beard's Black Walnut",
+    name: "Beard's Cascade Black Walnut + 8-Ply Museum Mat",
+    desc: 'Solid Pacific Northwest Black Walnut moulding with 8-ply museum rag mat & Optium Acrylic.',
+    addonPrice: 220,
+    frameBorder: '#3d2314',
+    frameWidth: '12px',
+    matBg: '#f4f1ea',
+    matPad: '18px',
+  },
+  {
+    id: 'beards-kells',
+    shortName: "Beard's Kells Bronze",
+    name: "Beard's Gilded Kells Bronze + Archival Linen Mat",
+    desc: 'Antiqued 24K bronze-leaf bevel & warm linen mat tailored for illuminated editions.',
+    addonPrice: 260,
+    frameBorder: '#b45309',
+    frameWidth: '12px',
+    matBg: '#efeadd',
+    matPad: '18px',
+  },
+  {
+    id: 'pdx-wlf-luminescent',
+    shortName: '✨ PDX Winter Light',
+    name: 'PDX Winter Light Festival Edge-Lit Luminescent Frame',
+    desc: '2700K/6500K edge-lit optical acrylic halo frame supporting Willamette Light Brigade.',
+    addonPrice: 185,
+    frameBorder: '#f59e0b',
+    frameWidth: '9px',
+    matBg: '#090d16',
+    matPad: '12px',
+  },
+  {
+    id: 'goodwill-upcycle',
+    shortName: '♻️ Goodwill Upcycle',
+    name: 'Goodwill Vintage Rescue & Archival Upcycle Frame',
+    desc: 'Artist field mission: rescues and restores a one-of-a-kind Portland vintage frame with archival backing.',
+    addonPrice: 45,
+    frameBorder: '#78350f',
+    frameWidth: '11px',
+    matBg: '#efe8d8',
+    matPad: '16px',
+  },
+];
+
+const portlandFulfillmentModes = [
+  {
+    id: 'pdx-dropship',
+    shortName: '📦 PDX Lab Dropship',
+    name: 'Portland Fine Art Lab Direct Dropship',
+    desc: 'Custom-printed in Portland & flat-crated direct to your door (insured US freight included).',
+    priceDelta: 0,
+  },
+  {
+    id: 'pdx-courier',
+    shortName: '🌲 PDX White-Glove',
+    name: 'Local Portland White-Glove Courier',
+    desc: 'Hand-delivered ready-to-hang across Multnomah, Washington & Clackamas counties.',
+    priceDelta: 0,
+  },
+  {
+    id: 'beards-willcall',
+    shortName: "🖼️ Beard's Will-Call",
+    name: "Beard's Framing Studio Will-Call (PDX Metro)",
+    desc: "Inspect & pick up at Beard's Framing (NW Pearl, Raleigh Hills, Lake Oswego, or Vancouver) — -$45 Crate-Free Credit.",
+    priceDelta: -45,
+  },
+  {
+    id: 'jls-closing-gift',
+    shortName: '🏡 John L. Scott Gift',
+    name: 'John L. Scott Real Estate Staging & Closing Gift',
+    desc: 'Includes engraved brass closing plaque, matched Rodda/Miller swatch deck & priority delivery (-$50 Partner Credit).',
+    priceDelta: -50,
+  },
+  {
+    id: 'goodwill-expedition',
+    shortName: '🛍️ Goodwill Handoff',
+    name: 'Circular Upcycle Frame Expedition + Local Handoff',
+    desc: 'Rescues a vintage Portland frame with acid-free backing and hand-delivers (-$35 Circular Credit).',
+    priceDelta: -35,
+  },
+];
+---
+
+<Layout>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8 relative z-10">
+    <!-- Hero Header -->
+    <header class="text-center space-y-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-sky-500/15 text-sky-300 border border-sky-400/40">
+        <i class="fab fa-paypal text-sky-400"></i>
+        <span>PAYPAL AI HACKATHON 2026 • AGENTIC COMMERCE & ARCHITECTURAL VISUALIZER</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black font-pocketgull text-white tracking-tight">
+        Agentic Wall Art Room Companion
+      </h1>
+      <p class="text-xs sm:text-sm text-slate-300 max-w-3xl mx-auto font-mono">
+        Describe your room, lighting, or budget to the <strong class="text-amber-300">AI Interior Art Concierge</strong>—or invoke <strong class="text-emerald-300">W3C WebMCP tools</strong>—to stage 300 DPI museum prints in 1:10 scale and check out via itemized <strong class="text-sky-300">PayPal Orders v2</strong> with instant SHA-256 provenance minting.
+      </p>
+    </header>
+
+    <!-- AI Interior Art Concierge Bar -->
+    <section
+      id="ai-concierge-panel"
+      class="rounded-3xl bg-slate-950/95 border-2 border-amber-500/40 p-4 sm:p-6 shadow-2xl space-y-3"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="size-8 rounded-xl bg-amber-500/20 border border-amber-400/50 flex items-center justify-center text-amber-300">
+            <i class="fas fa-wand-magic-sparkles"></i>
+          </span>
+          <div>
+            <h2 class="text-sm sm:text-base font-bold text-white font-pocketgull">
+              AI Interior Art Concierge & Budget Solver
+            </h2>
+            <p class="text-[11px] font-mono text-slate-400">
+              Multi-tier AI: Gemini 3.8 Flash + Chrome Built-in Gemma 4 + 256-d Semantic Palette Vector Engine (zero-key ready)
+            </p>
+          </div>
+        </div>
+        <details class="text-[10px] font-mono text-slate-400">
+          <summary class="cursor-pointer hover:text-amber-300 select-none">
+            🔑 Optional: Bring Gemini 3.8 API Key
+          </summary>
+          <div class="mt-1.5">
+            <input
+              id="ai-gemini-key-input"
+              type="password"
+              placeholder="AIza... (optional — runs 256-d vector AI locally by default)"
+              class="w-full sm:w-72 bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1 text-[10px] text-white focus:border-amber-400 focus:outline-none"
+            />
+          </div>
+        </details>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-2">
+        <input
+          id="ai-concierge-input"
+          type="text"
+          placeholder="e.g., Calm coastal water or misty forest print for an executive office with navy walls under $750..."
+          class="flex-1 bg-slate-900/90 border border-slate-700 focus:border-amber-400 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-mono text-white placeholder:text-slate-500 focus:outline-none"
+        />
+        <button
+          id="ai-concierge-submit-btn"
+          type="button"
+          class="px-5 py-2.5 rounded-xl font-mono text-xs font-bold bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-lg cursor-pointer transition-all flex items-center justify-center gap-2 shrink-0"
+        >
+          <i class="fas fa-wand-magic-sparkles"></i>
+          <span>Stage & Price Room</span>
+        </button>
+      </div>
+
+      <!-- 1-Click Judge Prompt Chips -->
+      <div class="flex items-center gap-1.5 flex-wrap text-[10px] font-mono">
+        <span class="text-slate-400 font-bold uppercase mr-1">Try Brief:</span>
+        <button
+          type="button"
+          class="ai-prompt-chip px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-amber-200 border border-amber-500/30 cursor-pointer transition-colors"
+          data-prompt="Executive studio office with Puget Sound navy walls, architectural calm water or bridge under $750"
+        >
+          💼 Executive Navy Office (&lt;$750)
+        </button>
+        <button
+          type="button"
+          class="ai-prompt-chip px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-emerald-200 border border-emerald-500/30 cursor-pointer transition-colors"
+          data-prompt="Misty old-growth forest wilderness print with black walnut frame for a fireplace hearth closing gift"
+        >
+          🌲 Walnut Hearth Closing Gift
+        </button>
+        <button
+          type="button"
+          class="ai-prompt-chip px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-cyan-200 border border-cyan-500/30 cursor-pointer transition-colors"
+          data-prompt="Nocturnal obsidian dark wall with edge-lit luminescent festival halo frame and statement 40x60 acrylic"
+        >
+          ✨ Nocturnal Edge-Lit Statement
+        </button>
+        <button
+          type="button"
+          class="ai-prompt-chip px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-rose-200 border border-rose-500/30 cursor-pointer transition-colors"
+          data-prompt="Eco-friendly circular upcycled Goodwill vintage frame with botanical garden macro print under $450"
+        >
+          ♻️ Circular Upcycle (&lt;$450)
+        </button>
+      </div>
+
+      <!-- AI Concierge Output Card -->
+      <div
+        id="ai-concierge-result"
+        class="hidden rounded-2xl bg-amber-500/10 border border-amber-400/40 p-3.5 space-y-1.5 text-xs font-mono"
+      >
+        <div class="flex items-center justify-between flex-wrap gap-2">
+          <span class="text-amber-300 font-bold flex items-center gap-1.5">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>AI Spatial Curation Applied to Room & PayPal Ledger</span>
+          </span>
+          <span
+            id="ai-concierge-engine-badge"
+            class="px-2 py-0.5 rounded-full text-[10px] bg-black/70 text-cyan-300 border border-cyan-500/30"
+          >
+            Engine: semantic-vector-256d
+          </span>
+        </div>
+        <p id="ai-concierge-rationale" class="text-slate-200 text-[11px] leading-relaxed"></p>
+      </div>
+    </section>
+
+    <!-- Main 1:10 Architectural Visualizer & PayPal Orders v2 Console -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <!-- Left/Center 2 Columns: Interactive 1:10 Room Wall -->
+      <div class="lg:col-span-2 space-y-4">
+        <div
+          id="virtual-room-wall"
+          class="relative rounded-3xl p-6 sm:p-12 shadow-2xl transition-colors duration-500 flex flex-col items-center justify-between min-h-120 sm:min-h-136 border-4 border-slate-800 overflow-hidden"
+          style="background-color: #E8E7E0;"
+        >
+          <div
+            id="wall-texture-overlay"
+            class="absolute inset-0 rounded-3xl pointer-events-none transition-all duration-500 opacity-35 mix-blend-overlay"
+            style="background-image: radial-gradient(rgba(0,0,0,0.08) 1px, transparent 0); background-size: 4px 4px;"
+          ></div>
+          <div
+            id="wall-lighting-overlay"
+            class="absolute inset-0 rounded-3xl pointer-events-none"
+            style="background: radial-gradient(ellipse at 50% 0%, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.06) 45%, rgba(0,0,0,0.25) 100%);"
+          ></div>
+
+          <!-- Wall Top Toolbar -->
+          <div class="w-full flex items-center justify-between mb-4 flex-wrap gap-2 relative z-10">
+            <span
+              id="active-wall-paint-label"
+              class="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-black/80 text-amber-300 border border-white/20 shadow-lg"
+            >
+              Wall Paint: Rodda CA002 Alabaster Fog • Smooth Eggshell
+            </span>
+
+            <div class="flex items-center gap-1 flex-wrap bg-black/80 px-2 py-1 rounded-xl border border-white/15">
+              <button type="button" class="room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shadow-sm" data-room="living">
+                🛋️ Living
+              </button>
+              <button type="button" class="room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer" data-room="hearth">
+                🏡 Hearth
+              </button>
+              <button type="button" class="room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer" data-room="office">
+                💻 Office
+              </button>
+              <button type="button" class="room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer" data-room="gallery">
+                🏛️ Gallery
+              </button>
+              <button type="button" class="room-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-slate-900 text-slate-300 hover:text-white border border-slate-800 cursor-pointer" data-room="pavilion">
+                ✨ Light Fest
+              </button>
+            </div>
+          </div>
+
+          <!-- Mounted Fine Art Frame + Pixie Gnome Curators -->
+          <div
+            id="artwork-mounting-frame-wrapper"
+            class="relative z-10 transition-all duration-500 ease-out flex items-center justify-center my-2"
+          >
+            <div
+              id="gnome-left"
+              class="absolute -top-8 -left-5 transition-all duration-500 opacity-0 z-40 pointer-events-none text-lg"
+            >
+              🧚‍♂️✨
+            </div>
+            <div
+              id="gnome-right"
+              class="absolute -top-8 -right-5 transition-all duration-500 opacity-0 z-40 pointer-events-none text-lg"
+            >
+              ✨🧚
+            </div>
+
+            <div
+              id="artwork-mounting-frame"
+              class="relative z-10 shadow-[0_30px_70px_rgba(0,0,0,0.7),0_10px_25px_rgba(0,0,0,0.4)] border-2 border-stone-950 bg-stone-900 rounded-xs flex items-center justify-center transition-all duration-300 ring-1 ring-white/10 p-1 max-w-[82%] max-h-92 overflow-hidden"
+            >
+              <img
+                id="active-wall-artwork"
+                src={withBase(showcaseSelects[0]?.src || '/images/vault/v2_ingest_192_laurelhurst.webp')}
+                alt={showcaseSelects[0]?.title || 'Fine Art Print'}
+                class="max-h-72 sm:max-h-80 w-auto h-auto max-w-full object-contain block select-none transition-opacity duration-300"
+              />
+            </div>
+          </div>
+
+          <div
+            id="fairy-sparkles"
+            class="absolute inset-0 pointer-events-none opacity-0 transition-opacity duration-300 flex items-center justify-center z-30"
+          >
+            <div class="size-56 rounded-full bg-amber-400/20 blur-2xl"></div>
+          </div>
+
+          <!-- 1:10 Architectural Furniture Silhouettes & Props -->
+          <div class="w-full max-w-lg mt-6 flex flex-col items-center relative z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.75)]">
+            <div class="relative w-full max-w-sm h-9 flex items-end justify-center mb-0.5 z-20">
+              <!-- Skateboard Prop -->
+              <div id="prop-skateboard" class="flex flex-col items-center select-none">
+                <div class="w-36 h-2.5 rounded-full bg-amber-900 border-t border-white/25 shadow-md"></div>
+                <div class="w-28 flex justify-between -mt-0.5">
+                  <div class="size-3 rounded-full bg-stone-200 border border-black"></div>
+                  <div class="size-3 rounded-full bg-stone-200 border border-black"></div>
+                </div>
+              </div>
+              <!-- Plant Prop -->
+              <div id="prop-plant" class="hidden items-end justify-center select-none">
+                <div class="px-3 py-1 rounded-b-xl bg-emerald-900 border-t-2 border-emerald-400 text-xs">🌿</div>
+              </div>
+              <!-- Office Workstation Prop -->
+              <div id="prop-workstation" class="hidden items-end justify-center gap-2 select-none">
+                <div class="w-14 h-8 rounded-t-sm bg-slate-950 border border-cyan-400/50 flex items-center justify-center text-[9px] text-cyan-300 font-mono">α7R III</div>
+              </div>
+              <!-- Gallery Sculpture Prop -->
+              <div id="prop-sculpture" class="hidden items-end justify-center gap-2 select-none">
+                <div class="w-10 h-8 rounded-t-full bg-amber-600/80 border border-amber-300"></div>
+              </div>
+              <!-- Hearth Candles Prop -->
+              <div id="prop-hearth-vessels" class="hidden items-end justify-center gap-2 select-none">
+                <div class="w-4 h-7 rounded-t-md bg-amber-500/50 border border-amber-300"></div>
+                <div class="w-5 h-8 rounded-t-md bg-amber-400/60 border border-amber-200"></div>
+              </div>
+            </div>
+
+            <!-- 1. Living Credenza -->
+            <div id="silhouette-living" class="w-full flex flex-col items-center">
+              <div class="timber-surface w-full h-7 rounded-t-xl border-t border-amber-500/30" style="background: linear-gradient(180deg, #3d2314 0%, #2b170c 100%);"></div>
+              <div class="timber-body w-[92%] h-12 rounded-b-xl border-x border-b border-black/40 flex items-center justify-center gap-2" style="background: linear-gradient(180deg, #2b170c 0%, #170b05 100%);">
+                <span class="size-2 rounded-full bg-amber-300"></span>
+                <span class="size-2 rounded-full bg-amber-300"></span>
+              </div>
+            </div>
+
+            <!-- 2. Hearth -->
+            <div id="silhouette-hearth" class="hidden w-full flex-col items-center">
+              <div class="timber-surface w-[98%] h-6 rounded-md border-t border-amber-500/40" style="background: linear-gradient(180deg, #3d2314 0%, #2b170c 100%);"></div>
+              <div class="w-[82%] h-14 rounded-b-lg bg-stone-950 border-x-4 border-stone-800 flex items-end justify-center pb-2">
+                <div class="w-20 h-3 rounded-full bg-amber-500/80 blur-[1px]"></div>
+              </div>
+            </div>
+
+            <!-- 3. Office -->
+            <div id="silhouette-office" class="hidden w-full flex-col items-center">
+              <div class="timber-surface w-[96%] h-4 rounded-t-lg border-t border-cyan-400/40" style="background: linear-gradient(180deg, #475569 0%, #1e293b 100%);"></div>
+              <div class="w-[84%] h-14 flex justify-between px-4">
+                <div class="w-2.5 h-full bg-slate-600"></div>
+                <div class="px-3 h-4 bg-slate-900 border border-slate-700 rounded-b-md text-[8px] font-mono text-emerald-400">SIT-STAND • 29.5"</div>
+                <div class="w-2.5 h-full bg-slate-600"></div>
+              </div>
+            </div>
+
+            <!-- 4. Gallery -->
+            <div id="silhouette-gallery" class="hidden w-full flex-col items-center">
+              <div class="timber-surface w-[78%] h-5 rounded-xs border-t border-stone-400/40" style="background: linear-gradient(180deg, #78716c 0%, #57534e 100%);"></div>
+              <div class="w-[62%] h-12 flex justify-between px-4">
+                <div class="timber-body w-9 h-full bg-stone-900"></div>
+                <div class="timber-body w-9 h-full bg-stone-900"></div>
+              </div>
+            </div>
+
+            <!-- 5. Light Pavilion -->
+            <div id="silhouette-pavilion" class="hidden w-full flex-col items-center">
+              <div class="w-[80%] h-3.5 rounded-t-md bg-slate-950 border-t-2 border-cyan-400"></div>
+              <div class="w-[72%] h-13 bg-slate-950 border-x border-slate-800 flex items-center justify-center text-[8px] font-mono text-cyan-300 tracking-widest">
+                PDX WINTER LIGHT FESTIVAL
+              </div>
+            </div>
+
+            <span id="furniture-caption" class="text-[9px] font-mono text-slate-800 bg-white/75 px-2.5 py-0.5 rounded-full mt-2 uppercase tracking-wider font-bold">
+              Mid-Century Tambour Credenza • 1:10 Scale (Pacific Black Walnut)
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick-Swap Tray -->
+        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-4 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-mono text-amber-400 font-bold uppercase">Quick-Swap Curated Masterworks:</span>
+            <button id="toggle-gnomes-btn" type="button" class="px-2 py-0.5 rounded-lg text-[10px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 cursor-pointer">
+              🧚‍♂️ Pixie Curators: <span id="gnome-status-label" class="text-emerald-400 font-bold">ON</span>
+            </button>
+          </div>
+          <div class="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
+            {showcaseSelects.map((photo, idx) => (
+              <button
+                type="button"
+                class={`quick-swap-btn shrink-0 w-28 rounded-xl overflow-hidden border-2 transition-all cursor-pointer group ${idx === 0 ? 'border-amber-400 scale-105 ring-2 ring-amber-400/50' : 'border-slate-800 hover:border-slate-600'}`}
+                data-id={photo.id}
+              >
+                <div class="aspect-4/3 bg-black relative">
+                  <img
+                    src={withBase(photo.src)}
+                    alt={photo.title}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                  <span class="absolute bottom-1 right-1 text-[8px] font-mono bg-black/80 text-amber-300 px-1 rounded">
+                    {photo.isCrownDiamond ? `💎 ${photo.score}` : `★ ${photo.score}`}
+                  </span>
+                </div>
+                <div class="p-1.5 bg-slate-900 text-left">
+                  <span class="text-[9px] font-mono text-slate-300 block truncate group-hover:text-amber-400 font-semibold">{photo.title}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <!-- Surface Material, Prop, Texture & Paint Controls -->
+        <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-4 space-y-3">
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+            <span class="text-[10px] font-mono text-amber-400 font-bold uppercase shrink-0">Timber/Plinth:</span>
+            <button type="button" class="wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shrink-0" data-wood="walnut">🌲 Black Walnut</button>
+            <button type="button" class="wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-wood="oak">🍁 White Oak</button>
+            <button type="button" class="wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-wood="redwood">🪵 Redwood</button>
+            <button type="button" class="wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-wood="shousugi">🌿 Shou Sugi Ban</button>
+            <button type="button" class="wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-wood="titanium">🔩 Titanium</button>
+            <button type="button" class="wood-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-wood="concrete">🏛️ Concrete</button>
+          </div>
+
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-t border-white/10 pt-2">
+            <span class="text-[10px] font-mono text-amber-300 font-bold uppercase shrink-0">Wall Finish:</span>
+            <button type="button" class="texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shrink-0" data-texture="eggshell">🎨 Eggshell</button>
+            <button type="button" class="texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-texture="cedarslat">🪵 Cedar Slat</button>
+            <button type="button" class="texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-texture="gallerylinen">🖼️ Gallery Linen</button>
+            <button type="button" class="texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-texture="loftbrick">🧱 Loft Brick</button>
+            <button type="button" class="texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-texture="limewash">🏛️ Lime Wash</button>
+            <button type="button" class="texture-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-texture="concrete">🏢 Micro-Cement</button>
+          </div>
+
+          <div class="space-y-1.5 border-t border-white/10 pt-2">
+            <span class="text-[10px] font-mono text-amber-400 font-bold uppercase block">
+              🌲 Pacific Northwest Wall Paint Pigments (Rodda & Miller Paint):
+            </span>
+            <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+              {pnwWallPaints.map((sw, idx) => (
+                <button
+                  type="button"
+                  class={`paint-swatch-btn px-3 py-1.5 rounded-xl text-xs font-mono font-bold transition-all border border-white/25 shrink-0 cursor-pointer flex items-center gap-1.5 ${idx === 0 ? 'ring-2 ring-amber-400 scale-105' : ''}`}
+                  style={`background-color: ${sw.hex}; color: ${['NW045', 'CA092', 'H0010', 'NW010'].includes(sw.code) ? '#fff' : '#000'};`}
+                  data-hex={sw.hex}
+                  data-brand={sw.brand}
+                  data-code={sw.code}
+                  data-name={sw.name}
+                >
+                  <span class="size-2.5 rounded-full border border-black/40" style={`background-color: ${sw.hex};`}></span>
+                  <span>{sw.brand} {sw.code} {sw.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Spec Builder & PayPal Orders v2 Checkout Console -->
+      <div class="bg-slate-950/95 border border-slate-800 rounded-3xl p-5 shadow-2xl space-y-4 text-xs font-mono">
+        <div class="space-y-2 pb-3 border-b border-white/10">
+          <div class="flex items-center justify-between gap-2">
+            <span class="text-amber-400 font-bold uppercase text-[10px] tracking-wider">Selected Fine Art Print</span>
+            <button
+              type="button"
+              id="copy-partner-spec-btn"
+              class="px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-amber-300 border border-amber-500/40 text-[10px] font-bold cursor-pointer flex items-center gap-1"
+            >
+              <i class="fas fa-link text-[9px]"></i>
+              <span id="copy-partner-spec-label">Share Spec Link</span>
+            </button>
+          </div>
+          <h2 id="store-artwork-title" class="text-base sm:text-lg font-pocketgull font-bold text-white leading-snug">
+            {showcaseSelects[0]?.title}
+          </h2>
+          <span id="store-artwork-telemetry" class="text-slate-400 text-[10px] block truncate">
+            {showcaseSelects[0]?.telemetry}
+          </span>
+
+          <div class="pt-1">
+            <span class="text-[9px] text-slate-400 uppercase font-bold block mb-1.5">⚡ 1-Click PNW Partner Presets:</span>
+            <div class="flex flex-wrap gap-1.5">
+              <button type="button" class="partner-preset-btn px-2 py-1 rounded-lg text-[10px] font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer" data-partner-preset="collector">🖼️ Collector</button>
+              <button type="button" class="partner-preset-btn px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-900 text-emerald-300 border border-emerald-500/40 cursor-pointer" data-partner-preset="jls">🏡 JLS Staging</button>
+              <button type="button" class="partner-preset-btn px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-900 text-amber-300 border border-amber-500/40 cursor-pointer" data-partner-preset="pdxwlf">✨ Winter Light</button>
+              <button type="button" class="partner-preset-btn px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-900 text-cyan-300 border border-cyan-500/40 cursor-pointer" data-partner-preset="beards">🌲 Beard's</button>
+              <button type="button" class="partner-preset-btn px-2 py-1 rounded-lg text-[10px] font-bold bg-slate-900 text-rose-300 border border-rose-500/40 cursor-pointer" data-partner-preset="goodwill">♻️ Upcycle</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. Dimensions & 2. Substrate -->
+        <div class="space-y-3">
+          <div>
+            <label class="text-slate-300 uppercase font-bold text-[10px] block mb-1.5">1. Dimension (300 DPI Full-Frame):</label>
+            <div class="grid grid-cols-3 gap-1.5">
+              <button type="button" class="size-btn py-1.5 px-2 rounded-xl bg-slate-900 border border-slate-700 text-center cursor-pointer text-white" data-size="16x24" data-base-price="380">
+                <span class="font-bold block text-[11px]">16×24"</span>
+                <span class="text-[9px] text-slate-400 block">$380 base</span>
+              </button>
+              <button type="button" class="size-btn py-1.5 px-2 rounded-xl bg-amber-500 text-black border border-amber-400 font-bold text-center cursor-pointer shadow-md" data-size="24x36" data-base-price="650">
+                <span class="block text-[11px]">24×36"</span>
+                <span class="text-[9px] block">$650 base</span>
+              </button>
+              <button type="button" class="size-btn py-1.5 px-2 rounded-xl bg-slate-900 border border-slate-700 text-center cursor-pointer text-white" data-size="40x60" data-base-price="1450">
+                <span class="font-bold block text-[11px]">40×60"</span>
+                <span class="text-[9px] text-slate-400 block">$1450 base</span>
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label class="text-slate-300 uppercase font-bold text-[10px] block mb-1.5">2. Museum Substrate:</label>
+            <div class="grid grid-cols-3 gap-1.5">
+              {substrates.map((sub, idx) => (
+                <button
+                  type="button"
+                  class={`substrate-btn py-2 px-2 rounded-xl text-center border transition-all cursor-pointer ${idx === 0 ? 'bg-amber-500/15 border-amber-400 text-white font-bold' : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700'}`}
+                  data-id={sub.id}
+                  data-name={sub.name}
+                  data-desc={sub.desc}
+                  data-multiplier={sub.priceMultiplier}
+                >
+                  <span class="block text-[10px] leading-tight">{sub.shortName}</span>
+                  <span class="text-[9px] text-amber-300/90 block mt-0.5">{sub.priceMultiplier}×</span>
+                </button>
+              ))}
+            </div>
+            <p id="active-substrate-desc" class="text-[10px] text-slate-400 mt-1.5 px-2.5 py-1.5 rounded-lg bg-slate-900/70 border border-white/5">
+              {substrates[0].desc}
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Framing -->
+        <div class="space-y-1.5 pt-2 border-t border-white/10">
+          <label class="text-amber-300 uppercase font-bold text-[10px] block">3. Framing & Illumination:</label>
+          <div class="grid grid-cols-2 gap-1.5">
+            {beardsFramingProfiles.map((fp, idx) => (
+              <button
+                type="button"
+                class={`framing-btn py-2 px-2.5 rounded-xl text-left border transition-all cursor-pointer flex items-center justify-between gap-1 ${idx === 0 ? 'bg-amber-500/15 border-amber-400 text-white font-bold' : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700'}`}
+                data-id={fp.id}
+                data-name={fp.name}
+                data-desc={fp.desc}
+                data-addon={fp.addonPrice}
+                data-border-color={fp.frameBorder}
+                data-border-width={fp.frameWidth}
+                data-mat-bg={fp.matBg}
+                data-mat-pad={fp.matPad}
+              >
+                <span class="text-[10px] truncate">{fp.shortName}</span>
+                <span class="text-[9px] text-amber-300 shrink-0">{fp.addonPrice === 0 ? 'Incl' : `+$${fp.addonPrice}`}</span>
+              </button>
+            ))}
+          </div>
+          <p id="active-framing-desc" class="text-[10px] text-amber-200/90 mt-1 px-2.5 py-1.5 rounded-lg bg-amber-500/10 border border-amber-500/20">
+            {beardsFramingProfiles[0].desc}
+          </p>
+        </div>
+
+        <!-- 4. Fulfillment -->
+        <div class="space-y-1.5 pt-2 border-t border-white/10">
+          <div class="flex items-center justify-between">
+            <label class="text-cyan-300 uppercase font-bold text-[10px]">4. PNW Fulfillment & Rebates:</label>
+            <span class="text-[9px] text-emerald-400 font-bold">Up to -$50 Credit</span>
+          </div>
+          <div class="grid grid-cols-2 gap-1.5">
+            {portlandFulfillmentModes.map((mode, idx) => (
+              <button
+                type="button"
+                class={`fulfillment-btn py-2 px-2.5 rounded-xl text-left border transition-all cursor-pointer flex items-center justify-between gap-1 ${idx === 0 ? 'bg-cyan-500/15 border-cyan-400 text-white font-bold' : 'bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700'} ${idx === portlandFulfillmentModes.length - 1 ? 'col-span-2' : ''}`}
+                data-id={mode.id}
+                data-name={mode.name}
+                data-desc={mode.desc}
+                data-delta={mode.priceDelta}
+              >
+                <span class="text-[10px] truncate">{mode.shortName}</span>
+                <span class={`text-[9px] shrink-0 ${mode.priceDelta < 0 ? 'text-emerald-400 font-bold' : 'text-slate-400'}`}>
+                  {mode.priceDelta < 0 ? `-$${Math.abs(mode.priceDelta)}` : 'Free'}
+                </span>
+              </button>
+            ))}
+          </div>
+          <p id="active-fulfillment-desc" class="text-[10px] text-cyan-200/90 mt-1 px-2.5 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
+            {portlandFulfillmentModes[0].desc}
+          </p>
+
+          <div id="beards-studio-picker" class="hidden p-2.5 rounded-xl bg-slate-900/90 border border-amber-500/30 space-y-1">
+            <label for="beards-studio-select" class="text-[9px] uppercase text-amber-300 font-bold block">Select Partner Hub:</label>
+            <select id="beards-studio-select" class="w-full bg-slate-950 text-slate-200 border border-slate-700 rounded-lg px-2 py-1.5 text-[10px]">
+              <option value="Beard's Framing — NW Pearl / Slabtown (Portland)">Beard's Framing — NW Pearl / Slabtown (Portland)</option>
+              <option value="Beard's Framing — Lake Oswego / Kruse Way">Beard's Framing — Lake Oswego / Kruse Way</option>
+              <option value="John L. Scott — Lake Oswego / Sunset Corridor">John L. Scott — Lake Oswego / Sunset Corridor</option>
+              <option value="PDX Winter Light Festival — World Trade Center Plaza">PDXWLF — World Trade Center Plaza</option>
+              <option value="Goodwill Superstore — SE 6th & Grand Ave (Portland)">Goodwill — SE 6th & Grand Ave (Portland)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- PayPal Orders v2 Checkout Ledger -->
+        <div
+          id="paypal-checkout-ledger"
+          class="p-4 rounded-2xl bg-slate-900/95 border-2 border-sky-500/50 space-y-3 shadow-xl transition-all"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <span class="text-sky-300 font-bold uppercase text-[10px] flex items-center gap-1">
+                <i class="fab fa-paypal"></i>
+                <span>PayPal Orders v2 Ledger</span>
+              </span>
+              <span id="paypal-sdk-status" class="text-[9px] text-emerald-400 block">
+                PayPal Orders v2 • Sandbox SDK Ready
+              </span>
+            </div>
+            <span id="calculated-price" class="text-2xl font-pocketgull font-black text-amber-400">$910</span>
+          </div>
+
+          <!-- Sandbox / Live Mode Switcher -->
+          <div class="flex items-center justify-between bg-slate-950 p-1.5 rounded-xl border border-slate-800">
+            <span class="text-[9.5px] text-slate-400 pl-1">SDK Mode:</span>
+            <div class="flex items-center gap-1">
+              <button
+                type="button"
+                data-env="sandbox"
+                class="paypal-env-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-[#0070BA] text-white border border-sky-400 cursor-pointer"
+              >
+                🧪 Judge Sandbox
+              </button>
+              <button
+                type="button"
+                data-env="live"
+                class="paypal-env-btn px-2.5 py-1 rounded-lg text-[10px] font-mono font-bold bg-slate-900 text-slate-400 hover:text-white border border-slate-700 cursor-pointer"
+              >
+                🌐 Live Merchant
+              </button>
+            </div>
+          </div>
+
+          <!-- Itemized Breakdown -->
+          <div class="grid grid-cols-2 gap-x-3 gap-y-1 text-[10px] pt-2 border-t border-white/10 text-slate-300">
+            <div class="flex justify-between">
+              <span class="text-slate-400">Base Print:</span>
+              <span id="ledger-base-print" class="font-bold text-white">$910</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Framing:</span>
+              <span id="ledger-partner-addon" class="font-bold text-amber-300">Included</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-slate-400">Partner Rebate:</span>
+              <span id="ledger-partner-credit" class="font-bold text-emerald-400">$0</span>
+            </div>
+            <div class="flex justify-between truncate">
+              <span class="text-slate-400">Paint Spec:</span>
+              <span id="ledger-paint-spec" class="font-bold text-cyan-300 truncate ml-1">Rodda CA002</span>
+            </div>
+          </div>
+
+          <div id="price-breakdown-summary" class="text-[9px] text-slate-400 pt-1 border-t border-white/5 truncate">
+            24×36" UltraHD Borderless Acrylic Glass • Borderless Float • PDX Dropship
+          </div>
+
+          <!-- Live PayPal JS SDK v8 Smart Payment Buttons (PayPal + Venmo + Pay Later) -->
+          <div id="paypal-smart-button-container" class="min-h-11 pt-1"></div>
+
+          <!-- 1-Click Judge Instant Order Capture Simulator (No PayPal Sandbox Login Needed) -->
+          <button
+            id="judge-simulate-capture-btn"
+            type="button"
+            class="w-full py-2.5 px-3 rounded-xl font-bold bg-emerald-600/20 hover:bg-emerald-600/35 text-emerald-300 border border-emerald-400/50 transition-all cursor-pointer text-[11px] flex items-center justify-between"
+            title="For Hackathon Judges: Simulates a complete PayPal Orders v2 capture and mints a live SHA-256 Certificate of Authenticity without needing Sandbox buyer credentials"
+          >
+            <span class="flex items-center gap-1.5">
+              <i class="fas fa-bolt text-amber-300"></i>
+              <span>Instant Judge Sandbox Capture</span>
+            </span>
+            <span id="judge-sim-price" class="font-bold text-white">$910 → COA</span>
+          </button>
+
+          <!-- Live Inspectable PayPal Orders v2 JSON Payload -->
+          <details class="rounded-xl bg-black/70 border border-slate-800 px-3 py-2 text-[10px]">
+            <summary class="cursor-pointer text-sky-300 font-bold select-none">
+              🔍 Inspect Live PayPal Orders v2 Payload
+            </summary>
+            <pre
+              id="paypal-order-json-preview"
+              class="mt-2 text-[9px] text-emerald-300 overflow-x-auto max-h-48 leading-snug"
+            ></pre>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <!-- WebMCP Agentic Commerce Inspector Panel -->
+    <section
+      id="webmcp-inspector"
+      class="rounded-3xl bg-slate-950/95 border border-emerald-500/40 p-5 sm:p-6 shadow-2xl space-y-4"
+    >
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div>
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-300 border border-emerald-400/40 mb-1">
+            <i class="fas fa-robot"></i>
+            <span id="webmcp-native-badge">Registering W3C WebMCP Tools...</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-black font-pocketgull text-white">
+            Agentic Commerce Tooling (`document.modelContext`)
+          </h2>
+          <p class="text-xs font-mono text-slate-400">
+            Exposes 4 client-side WebMCP tools to in-browser AI agents with human-in-the-loop PayPal Orders v2 confirmation boundaries. Click any tool below to invoke it live!
+          </p>
+        </div>
+        <a
+          href="https://github.com/philgear/pgphototrek-paypal-ai/blob/main/schema.json"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs font-mono text-cyan-300 shrink-0 self-start"
+        >
+          View `schema.json` & `evals.json` ↗
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 font-mono text-xs">
+        <button
+          type="button"
+          class="webmcp-test-btn p-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 text-left space-y-1.5 cursor-pointer transition-all"
+          data-tool="search_fine_art_prints"
+          data-args='{"query":"misty forest mountain","domain":"wilderness"}'
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-emerald-300 font-bold text-[11px]">search_fine_art_prints</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">readOnlyHint</span>
+          </div>
+          <p class="text-[10px] text-slate-400">Semantic 256-d search across curated prints with pagination.</p>
+          <span class="text-[10px] text-amber-300 block pt-1">▶ Run Sample Query</span>
+        </button>
+
+        <button
+          type="button"
+          class="webmcp-test-btn p-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 text-left space-y-1.5 cursor-pointer transition-all"
+          data-tool="stage_artwork_in_room"
+          data-args='{"room":"gallery","paint_code":"MW001","size":"40x60","substrate":"acrylic","framing":"beards-black"}'
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-cyan-300 font-bold text-[11px]">stage_artwork_in_room</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">UI state</span>
+          </div>
+          <p class="text-[10px] text-slate-400">Configures 1:10 room silhouette, wall paint, substrate & framing.</p>
+          <span class="text-[10px] text-amber-300 block pt-1">▶ Stage 40×60 Gallery</span>
+        </button>
+
+        <button
+          type="button"
+          class="webmcp-test-btn p-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-emerald-400 text-left space-y-1.5 cursor-pointer transition-all"
+          data-tool="curate_room_with_ai"
+          data-args='{"design_brief":"Calm water reflection print for an executive office with navy walls under $750"}'
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-amber-300 font-bold text-[11px]">curate_room_with_ai</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300">AI Concierge</span>
+          </div>
+          <p class="text-[10px] text-slate-400">Solves room vibe, paint harmony & budget cap end-to-end.</p>
+          <span class="text-[10px] text-amber-300 block pt-1">▶ Run AI Design Brief</span>
+        </button>
+
+        <button
+          type="button"
+          class="webmcp-test-btn p-3.5 rounded-2xl bg-slate-900 hover:bg-slate-800 border border-slate-700 hover:border-sky-400 text-left space-y-1.5 cursor-pointer transition-all"
+          data-tool="initiate_paypal_checkout"
+          data-args='{"buyer_note":"Closing gift dedication plaque for the Peterson Residence"}'
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-sky-300 font-bold text-[11px]">initiate_paypal_checkout</span>
+            <span class="text-[9px] px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300">HITL Hand-off</span>
+          </div>
+          <p class="text-[10px] text-slate-400">Returns `requires_user_action` & focuses PayPal Orders v2 ledger.</p>
+          <span class="text-[10px] text-amber-300 block pt-1">▶ Initiate Checkout</span>
+        </button>
+      </div>
+
+      <div class="rounded-2xl bg-black/80 border border-slate-800 p-3.5 font-mono text-[10px]">
+        <div class="text-slate-400 uppercase font-bold mb-1">Live WebMCP Tool Invocation Output (`<= 1,500 chars`):</div>
+        <pre id="webmcp-execution-log" class="text-emerald-300 overflow-x-auto max-h-44 leading-relaxed">Click any WebMCP tool card above (or invoke via Chrome `document.modelContext.executeTool`) to inspect the live structured agent response.</pre>
+      </div>
+    </section>
+
+    <!-- Curated Fine Art Print Catalog -->
+    <section class="pt-8 border-t border-slate-800 space-y-6" id="print-catalog">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-black font-pocketgull text-white">
+            Curated 300 DPI Archival Print Collection ({allPhotos.length})
+          </h2>
+          <p class="text-xs text-slate-400 font-mono mt-1">
+            Click <strong class="text-amber-300">Mount in Room 🖼️</strong> on any work to stage it on the architectural wall and update the PayPal Orders v2 ledger.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none font-mono text-xs">
+          <button type="button" class="store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-amber-500 text-black border border-amber-400 cursor-pointer shrink-0" data-filter="all">
+            All ({allPhotos.length})
+          </button>
+          <button type="button" class="store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-filter="diamonds">
+            💎 Diamonds ({allPhotos.filter((p) => p.isCrownDiamond).length})
+          </button>
+          <button type="button" class="store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-filter="wilderness">
+            🌲 Wilderness ({allPhotos.filter((p) => p.domain === 'wilderness').length})
+          </button>
+          <button type="button" class="store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-filter="water">
+            🌊 Waters ({allPhotos.filter((p) => p.domain === 'water').length})
+          </button>
+          <button type="button" class="store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-filter="built">
+            🏛️ Architecture ({allPhotos.filter((p) => p.domain === 'built').length})
+          </button>
+          <button type="button" class="store-filter-btn px-3 py-1.5 rounded-xl font-bold bg-slate-900 text-slate-300 border border-slate-800 cursor-pointer shrink-0" data-filter="macro">
+            🌿 Botanical ({allPhotos.filter((p) => p.domain === 'macro').length})
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {allPhotos.map((photo) => (
+          <article
+            class="store-catalog-card group bg-slate-950/85 rounded-2xl border border-slate-800 hover:border-amber-400/60 transition-all overflow-hidden flex flex-col justify-between shadow-xl"
+            data-domain={photo.domain}
+            data-diamond={photo.isCrownDiamond ? 'true' : 'false'}
+            data-id={photo.id}
+          >
+            <div>
+              <div class="aspect-3/2 bg-black relative overflow-hidden">
+                <img
+                  src={withBase(photo.src)}
+                  alt={photo.title}
+                  loading="lazy"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+                  <span class="px-2 py-0.5 rounded-md text-[9px] font-mono font-bold bg-black/80 text-amber-300 border border-amber-400/40">
+                    {photo.isCrownDiamond ? `💎 J++ ${photo.score}` : `★ ${photo.score}`}
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-4 space-y-2">
+                <h3 class="text-sm font-pocketgull font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-1">
+                  {photo.title}
+                </h3>
+                <p class="text-[10px] font-mono text-slate-400 line-clamp-2">{photo.desc}</p>
+                <div class="text-[9px] font-mono text-slate-500 truncate pt-1 border-t border-white/5">
+                  {photo.telemetry}
+                </div>
+                {photo.paintPalette && photo.paintPalette.length > 0 && (
+                  <div class="flex items-center gap-1.5 pt-1">
+                    <span class="text-[8px] font-mono uppercase text-slate-400">Pigments:</span>
+                    {photo.paintPalette.slice(0, 5).map((sw) => (
+                      <span
+                        class="size-3.5 rounded-full border border-white/30 inline-block"
+                        style={`background-color: ${sw.hex};`}
+                        title={sw.paintName}
+                      ></span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div class="p-4 pt-0">
+              <button
+                type="button"
+                class="catalog-mount-btn w-full py-2 px-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-mono text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                data-id={photo.id}
+              >
+                <span>Mount in Room 🖼️</span>
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <script is:inline id="store-catalog-json" type="application/json" set:html={JSON.stringify(allPhotos)} />
+  <script src="../scripts/store-client.ts"></script>
+</Layout>

@@ -1,0 +1,90 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "PocketGull", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "PocketGull Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --font-science-gothic: "PocketGull", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-pocketgull: "PocketGull", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root,
+html[data-theme="pebble"],
+html[data-theme="PEBBLE"] {
+  --color-primary: #94a3b8;
+  --color-primary-rgb: 148, 163, 184;
+  --color-secondary: #38bdf8;
+  --color-secondary-rgb: 56, 189, 248;
+  --color-accent: #f59e0b;
+  --color-background: #0b111e;
+  --color-panel-background: #131c2e;
+  --color-panel-border: rgba(56, 189, 248, 0.25);
+  --color-surface-mixed: #1e293b;
+  --color-text: #f8fafc;
+  --color-text-muted: #cbd5e1;
+  --klee-dot-color: rgba(96, 150, 186, 0.12);
+}
+
+html[data-theme="rubaiyat"],
+html[data-theme="RUBAIYAT"] {
+  --color-primary: #e05353;
+  --color-primary-rgb: 224, 83, 83;
+  --color-secondary: #f59e0b;
+  --color-secondary-rgb: 245, 158, 11;
+  --color-accent: #f87171;
+  --color-background: #130e0f;
+  --color-panel-background: #221417;
+  --color-panel-border: rgba(224, 83, 83, 0.35);
+  --color-surface-mixed: #331d22;
+  --color-text: #fffaf0;
+  --color-text-muted: #fed7aa;
+  --klee-dot-color: rgba(250, 204, 21, 0.1);
+}
+
+html[data-theme="kells"],
+html[data-theme="KELLS"] {
+  --color-primary: #4ade80;
+  --color-primary-rgb: 74, 222, 128;
+  --color-secondary: #facc15;
+  --color-secondary-rgb: 250, 204, 21;
+  --color-accent: #14b8a6;
+  --color-background: #09120c;
+  --color-panel-background: #102418;
+  --color-panel-border: rgba(74, 222, 128, 0.35);
+  --color-surface-mixed: #183323;
+  --color-text: #f0fff4;
+  --color-text-muted: #bbf7d0;
+  --klee-dot-color: rgba(74, 222, 128, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.klee-canvas-texture {
+  position: relative;
+}
+
+.klee-canvas-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle at center,
+    var(--klee-dot-color, rgba(255, 255, 255, 0.08)) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 28px 28px;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,20 @@
+# Phil Gear Photography — Agentic Interior Art Concierge & PayPal Orders v2 Store
+
+> Built for the 2026 PayPal AI Hackathon (`https://paypalaihackathon.devpost.com/`).
+> Live Demo: https://philgear.github.io/pgphototrek-paypal-ai/
+> Source Repository: https://github.com/philgear/pgphototrek-paypal-ai (Apache-2.0)
+
+## Overview
+An interactive 1:10 architectural wall art visualizer and fine art print store integrating:
+1. **PayPal Developer Platform (`@paypal/paypal-js` Orders v2 SDK)**: Dynamic itemized `purchase_units` (`item_total - discount = value`) covering archival print substrates, Portland custom studio framing addons, and partner studio credits, with both PayPal Sandbox (`client-id=sb`) and Live Merchant SDK modes plus a 1-click Judge Sandbox Capture simulator that mints a Web Crypto `SHA-256` Certificate of Authenticity.
+2. **Multi-Tier AI Interior Art Concierge**:
+   - **Tier 1**: Google Gemini (`gemini-3.8-flash`) structured JSON curation when an optional API key is supplied.
+   - **Tier 2**: Chrome Built-in AI (`window.ai.languageModel` / Gemma 4) for zero-egress on-device inference.
+   - **Tier 3**: Deterministic 256-dimensional n-gram semantic vector embedder & budget/color solver guaranteeing 100% zero-key, zero-latency availability for every judge and browser.
+3. **W3C WebMCP (`document.modelContext`) Agentic Commerce**: Exposes 4 client-side tools so in-browser AI agents can search the 36-plate catalog, stage rooms in 1:10 scale, curate within strict collector budgets, and hand off itemized PayPal Orders v2 checkouts with human-in-the-loop approval.
+
+## Registered WebMCP Tools (`schema.json`)
+- `search_fine_art_prints` (`readOnlyHint: true`): Semantic search across 36 curated prints by mood, landscape sphere, or wall paint harmony.
+- `stage_artwork_in_room`: Updates the live 1:10 room visualizer (artwork, room scene, calibrated Rodda/Miller/ Sherwin-Williams paint swatch, dimensions, archival substrate, framing, and fulfillment).
+- `curate_room_with_ai`: Runs the multi-tier AI Interior Concierge for natural-language collector prompts including budget caps (e.g., `"misty Pacific Northwest forest for a walnut office under $750"`), automatically staging the winning configuration.
+- `initiate_paypal_checkout`: Validates the itemized PayPal Orders v2 ledger and focuses the PayPal Smart Payment Buttons for human-in-the-loop collector authorization.
